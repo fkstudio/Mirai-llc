@@ -10602,10 +10602,24 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: auto;
+}
+
+@media (max-width: 991.98px) {
+  .fixed {
+    position: relative;
+    left: auto;
+  }
+}
+
 #header {
   background-color: black;
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -10642,6 +10656,18 @@ a.text-dark:hover, a.text-dark:focus {
   height: 100%;
 }
 
+#header .firtsHeader p {
+  margin: 0;
+  font-size: 13px;
+}
+
+#header .firtsHeader a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media (min-width: 992px) {
   #header .firtsHeader {
     padding: 15px;
@@ -10670,20 +10696,24 @@ a.text-dark:hover, a.text-dark:focus {
 
 #header .secondHeader h3 {
   color: #82c625;
-  font-size: 18px;
+  font-size: 15px;
+}
+
+#header .secondHeader p {
+  margin: 0;
+  font-size: 13px;
+}
+
+#header .secondHeader .logo img {
+  width: 290px;
+  height: 50px;
 }
 
 @media (max-width: 991.98px) {
-  #header .secondHeader img {
+  #header .secondHeader .logo img {
     height: 60px;
     width: 310px;
   }
-}
-
-#header .secondHeader #social {
-  color: white;
-  text-transform: uppercase;
-  font-weight: bold;
 }
 
 #header .secondHeader .icon {
@@ -10706,15 +10736,27 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+#header .secondHeader #social {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 #header .secondHeader .socialIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#header .secondHeader .socialIcons span {
-  width: 30px;
-  height: 30px;
+#header .secondHeader .socialIcons a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#header .secondHeader .socialIcons a span {
+  width: 25px;
+  height: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10728,7 +10770,8 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 5px;
 }
 
-#header .secondHeader .socialIcons span i {
+#header .secondHeader .socialIcons a span i {
+  font-size: 13px;
   color: white;
 }
 
@@ -10785,6 +10828,7 @@ a.text-dark:hover, a.text-dark:focus {
 @media (max-width: 991.98px) {
   #header {
     height: 70px;
+    position: fixed;
   }
 }
 
@@ -10831,6 +10875,7 @@ a.text-dark:hover, a.text-dark:focus {
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
+    right: 0;
     width: 100%;
     height: calc(100% - 50px);
     max-width: 300px;
@@ -10845,6 +10890,7 @@ a.text-dark:hover, a.text-dark:focus {
     transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
     transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    z-index: 999;
   }
   #header .main-nav.open {
     -webkit-transform: translate(0%, 0);
@@ -10874,6 +10920,7 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
   margin: 0;
   list-style: none;
+  height: 50px;
 }
 
 @media (min-width: 992px) {
@@ -10888,13 +10935,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #header .main-nav .main-menu > li {
-  padding: 18px;
-}
-
-@media (max-width: 1199.98px) {
-  #header .main-nav .main-menu > li {
-    padding: 14px;
-  }
+  padding: 13px;
+  z-index: 2;
 }
 
 #header .main-nav .main-menu > li > a {
@@ -10920,6 +10962,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 #header .main-nav .main-menu > li .login {
   color: white;
+  font-weight: bold;
+  text-transform: inherit;
+  position: relative;
 }
 
 #header .main-nav .main-menu > li .login i {
@@ -10937,11 +10982,38 @@ a.text-dark:hover, a.text-dark:focus {
 
 #header .main-nav .main-menu > li:nth-of-type(8) {
   background-color: #82c625;
-  border-bottom: 1px solid #ebebeb;
+}
+
+@media (max-width: 991.98px) {
+  #header .main-nav .main-menu > li:nth-of-type(8) {
+    border-bottom: 1px solid #ebebeb;
+  }
 }
 
 #header .main-nav .main-menu > li:nth-of-type(9) {
   background-color: #82c625;
+}
+
+#header .main-nav .main-menu::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  width: 21%;
+  background-color: #82c625;
+  height: 50px;
+  right: 0;
+}
+
+@media (max-width: 1199.98px) {
+  #header .main-nav .main-menu::after {
+    height: 23%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #header .main-nav .main-menu::after {
+    display: none;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -11038,6 +11110,11 @@ a.text-dark:hover, a.text-dark:focus {
   #content #findCars .filterContainer .filterTitle .logo {
     margin-top: 30px;
   }
+}
+
+#content #findCars .filterContainer .filterTitle .logo img {
+  width: 320px;
+  height: 50px;
 }
 
 @media (max-width: 767.98px) {
@@ -11316,28 +11393,24 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
 }
 
-#content #findCars .filterResults .tab-content.active {
-  display: block;
-  -webkit-animation: fadeEffect 1s;
-          animation: fadeEffect 1s;
-}
-
-@-webkit-keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+#content #findCars .filterResults .moreCars {
+  width: 200px;
+  height: 50px;
+  background-color: #508bb0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer#footer {
