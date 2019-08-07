@@ -24,12 +24,12 @@
 			</div>
 			<div class="secondHeader">
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
-						<div class="logo">
+					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-md-3">
+						<div class="logo justify-content-md-center">
 							<img src="img/logo.png" class="img-fluid">
 						</div>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-12 d-flex">
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 d-flex  mb-md-3 ">
 						<div class="icon ">
 							<i class="fas fa-map-marker-alt"></i>
 						</div>
@@ -40,7 +40,7 @@
 							<p>Japón 222-0.862</p>
 						</div>
 					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex align-items-center p-0 ">
+					<div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex align-items-center p-0 justify-content-md-center">
 						<div class="icon">
 							<i class="fas fa-phone"></i>
 						</div>
@@ -49,8 +49,7 @@
 							<p>(+81)45 488 4500</p>
 						</div>
 					</div>
-					<div
-						class="col-xl-3 col-lg-2 col-md-12 col-sm-6 col-xs-12  d-flex align-items-center flex-column justify-content-center pb-3">
+					<div class="col-xl-3 col-lg-2 col-md-6 col-sm-6 col-xs-12  d-flex align-items-center flex-column justify-content-center pb-3">
 						<h3 id="social">Social NetWork</h3>
 						<div class="socialIcons">
 							<span><i class="fab fa-facebook-f"></i></span>
@@ -63,6 +62,10 @@
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="d-flex d-lg-none menu-md">
+			<img src="img/logo.png" class="img-fluid logo-md ml-5">
+			<button class="d-lg-none ml-auto" onclick="$('.main-nav').toggleClass('open')"><i class="fas fa-bars"></i></button>
 		</div>
 		<nav class="main-nav">
 			<ul class="main-menu">
@@ -77,16 +80,14 @@
 				<li><a href="#!" class="login"><i class="fas fa-user"></i>login</a></li>
 			</ul>
 		</nav>
-		<button class="btn btn-sm btn-primary d-lg-none" onclick="$('.main-nav').toggleClass('open')">MENU</button>
 	</header>
 	<main id="content">
-
 		<section id="findCars">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xl-12 p-0 m-0">
 						<div class="filterContainer">
-							<div class="filterTitle d-flex justify-content-between align-items-center ">
+							<div class="filterTitle d-flex justify-content-between align-items-center">
 								<h1>
 									<small>Welcome to </small><span>autotradingbb</span>
 									<br>
@@ -98,18 +99,20 @@
 							</div>
 							<div class="filterOptions">
 								<div class="row d-flex align-items-end">
-									<div class="col-lg-4 p-0 ">
+									<div class="col-lg-4 col-sm-12 p-0 ">
 										<ul id="nav" class="nav-marco">
-											<li><a id="#stock" data-tab="stock" class="active tab-link">stocklist</a>
+											<li>
+												<a id="#stock" data-tab="stock" class="active tab-link">stocklist</a>
 											</li>
-											<li><a id="#search" data-tab="search" class="tab-link">Search Inventory</a>
+											<li>
+												<a id="#search" data-tab="search" class="tab-link">Search Inventory</a>
 											</li>
 										</ul>
 									</div>
 									<div class="col-lg-8 p-0 ">
 										<form>
 											<div class="form-row p-0">
-												<div class="col-lg-1 p-0">
+												<div class="col-lg-1 col-md-6 col-sm-12 p-lg-0 mt-md-4">
 													<select class="form-control">
 														<option>Make</option>
 														<option>2</option>
@@ -118,7 +121,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-1 p-0">
+												<div class="col-lg-1 col-md-6 col-sm-12 p-lg-0 mt-md-4">
 													<select class="form-control">
 														<option>Model</option>
 														<option>2</option>
@@ -127,7 +130,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-2 p-0">
+												<div class="col-lg-2 col-md-6 col-sm-12 p-lg-0 mt-md-4">
 													<select class="form-control">
 														<option>year from</option>
 														<option>2</option>
@@ -136,7 +139,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-2 p-0">
+												<div class="col-lg-2 col-md-6 col-sm-12 p-lg-0 mt-md-4">
 													<select class="form-control">
 														<option>year to</option>
 														<option>2</option>
@@ -145,7 +148,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-2 p-0">
+												<div class="col-lg-2 col-md-6 col-sm-12 p-lg-0 mt-md-4 mb-md-4">
 													<select class="form-control">
 														<option>price from</option>
 														<option>2</option>
@@ -154,7 +157,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-2 p-0">
+												<div class="col-lg-2 col-md-6 col-sm-12 p-lg-0 mt-md-4 mb-md-4">
 													<select class="form-control">
 														<option>price to</option>
 														<option>2</option>
@@ -177,12 +180,12 @@
 						<div class="container-fluid">
 							<div class="filterResultNumbers">
 								<div class="row">
-									<div class="col-lg-8">
+									<div class="col-lg-8 col-sm-12">
 										<div class="numberAvaliableCars">
 											<p>47,400 cars avaliables from Japan</p>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-lg-4 col-md-12">
 
 										<ul class="pagination">
 											<li class="page-item"><a class=" prev" href="#">Previous</a></li>
@@ -200,12 +203,15 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
@@ -213,12 +219,15 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
@@ -226,12 +235,15 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
@@ -239,12 +251,15 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
@@ -252,12 +267,15 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
@@ -265,37 +283,50 @@
 									<li>
 										<a href="#">
 											<div class="card">
-												<img class="card-img-top" src="..." alt="Card image cap">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
 												<div class="card-body">
-													<h5 class="card-title">Card title</h5>
-													<p class="card-text">Some quick example text to build on the card
-														title and make up the bulk of the card's content.</p>
-													<a href="#" class="btn btn-primary">Go somewhere</a>
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
 												</div>
 											</div>
 										</a>
 									</li>
 									<li>
-										<div class="card">
-											<img class="card-img-top" src="..." alt="Card image cap">
-											<div class="card-body">
-												<h5 class="card-title">Card title</h5>
-												<p class="card-text">Some quick example text to build on the card title
-													and make up the bulk of the card's content.</p>
-												<a href="#" class="btn btn-primary">Go somewhere</a>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
+												<div class="card-body">
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
+												</div>
 											</div>
-										</div>
+										</a>
 									</li>
 									<li>
-										<div class="card">
-											<img class="card-img-top" src="..." alt="Card image cap">
-											<div class="card-body">
-												<h5 class="card-title">Card title</h5>
-												<p class="card-text">Some quick example text to build on the card title
-													and make up the bulk of the card's content.</p>
-												<a href="#" class="btn btn-primary">Go somewhere</a>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="img/blog3.jpg" alt="Card image cap">
+												<div class="card-body">
+													<ul>
+														<li>Make: <span class="float-right">nissan</span></li>
+														<li>Mode: <span class="float-right">bmw</span></li>
+														<li>Mileage: <span class="float-right">0</span></li>
+														<li>Displacement: <span class="float-right">2000</span></li>
+														<li>Price: <span class="float-right">ask</span></li>
+													</ul>
+												</div>
 											</div>
-										</div>
+										</a>
 									</li>
 								</ul>
 
@@ -305,7 +336,6 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
 
 	<footer id="footer">

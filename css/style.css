@@ -10658,6 +10658,12 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+@media (max-width: 991.98px) {
+  #header .firtsHeader {
+    display: none;
+  }
+}
+
 #header .secondHeader {
   width: 100%;
 }
@@ -10665,6 +10671,13 @@ a.text-dark:hover, a.text-dark:focus {
 #header .secondHeader h3 {
   color: #82c625;
   font-size: 18px;
+}
+
+@media (max-width: 991.98px) {
+  #header .secondHeader img {
+    height: 60px;
+    width: 310px;
+  }
 }
 
 #header .secondHeader #social {
@@ -10685,6 +10698,12 @@ a.text-dark:hover, a.text-dark:focus {
           align-items: center;
   color: #a96733;
   padding: 20px;
+}
+
+@media (max-width: 991.98px) {
+  #header .secondHeader .icon {
+    font-size: 25px;
+  }
 }
 
 #header .secondHeader .socialIcons {
@@ -10714,8 +10733,58 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 @media (max-width: 991.98px) {
+  #header .secondHeader {
+    display: none;
+  }
+}
+
+#header .menu-md {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .menu-md img {
+  width: 270px;
+  height: 50px;
+}
+
+@media (max-width: 767.98px) {
+  #header .menu-md img {
+    display: none;
+  }
+}
+
+#header .menu-md button {
+  border: none;
+  border-radius: none;
+  width: 170px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  background-color: #82c625;
+}
+
+#header .menu-md button i {
+  color: white;
+  font-size: 20px;
+}
+
+@media (max-width: 991.98px) {
   #header {
-    height: auto;
+    height: 70px;
   }
 }
 
@@ -10751,6 +10820,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 991.98px) {
   #header .main-nav {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -10764,7 +10836,7 @@ a.text-dark:hover, a.text-dark:focus {
     max-width: 300px;
     background-color: #fff;
     right: 0;
-    top: 50px;
+    top: 70px;
     overflow: auto;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     -webkit-transform: translate(100%, 0);
@@ -10777,6 +10849,12 @@ a.text-dark:hover, a.text-dark:focus {
   #header .main-nav.open {
     -webkit-transform: translate(0%, 0);
             transform: translate(0%, 0);
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 767.98px) {
+  #header .main-nav {
+    max-width: 100%;
   }
 }
 
@@ -10815,7 +10893,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 1199.98px) {
   #header .main-nav .main-menu > li {
-    padding: 15px;
+    padding: 14px;
   }
 }
 
@@ -10834,10 +10912,9 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 991.98px) {
   #header .main-nav .main-menu > li > a {
-    padding: 15px;
+    padding: 8px;
     display: block;
     line-height: 1;
-    border-bottom: 1px solid #ebebeb;
   }
 }
 
@@ -10860,6 +10937,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 #header .main-nav .main-menu > li:nth-of-type(8) {
   background-color: #82c625;
+  border-bottom: 1px solid #ebebeb;
 }
 
 #header .main-nav .main-menu > li:nth-of-type(9) {
@@ -10868,7 +10946,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 @media (max-width: 991.98px) {
   #content {
-    padding-top: 50px;
+    padding-top: 100px;
   }
 }
 
@@ -10913,8 +10991,60 @@ a.text-dark:hover, a.text-dark:focus {
   font-size: 20px;
 }
 
+@media (max-width: 991.98px) {
+  #content #findCars .filterContainer .filterTitle h1 small {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle h1 small {
+    font-size: 14px;
+  }
+}
+
 #content #findCars .filterContainer .filterTitle h1 span {
   color: #82c625;
+}
+
+@media (max-width: 991.98px) {
+  #content #findCars .filterContainer .filterTitle h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle h1 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle h1 br {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle .logo {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterTitle .logo img {
+    width: 100%;
+    height: 46px;
+  }
 }
 
 #content #findCars .filterContainer .filterOptions #nav {
@@ -10972,6 +11102,21 @@ a.text-dark:hover, a.text-dark:focus {
   color: #535d5b;
 }
 
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterOptions #nav li {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterOptions #nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #content #findCars .filterContainer .filterOptions form {
   margin: 0;
 }
@@ -10986,6 +11131,12 @@ a.text-dark:hover, a.text-dark:focus {
   color: grey;
   position: relative;
   cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterContainer .filterOptions form .form-control {
+    margin-bottom: 10px;
+  }
 }
 
 #content #findCars .filterContainer .filterOptions form button {
@@ -11030,9 +11181,30 @@ a.text-dark:hover, a.text-dark:focus {
   text-transform: uppercase;
 }
 
+@media (max-width: 767.98px) {
+  #content #findCars .filterResultNumbers .numberAvaliableCars p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterResultNumbers .numberAvaliableCars {
+    padding-left: 20px;
+  }
+}
+
 #content #findCars .filterResultNumbers .pagination {
   margin: 0;
   width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  #content #findCars .filterResultNumbers .pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
 }
 
 #content #findCars .filterResultNumbers .pagination .prev, #content #findCars .filterResultNumbers .pagination .next {
@@ -11054,6 +11226,14 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 5px;
 }
 
+@media (max-width: 991.98px) {
+  #content #findCars .filterResultNumbers .pagination .prev, #content #findCars .filterResultNumbers .pagination .next {
+    -webkit-clip-path: none;
+            clip-path: none;
+    padding: 10px;
+  }
+}
+
 #content #findCars .filterResultNumbers .pagination .page-item .page-link {
   background-color: #82c625;
   height: 50px;
@@ -11070,10 +11250,6 @@ a.text-dark:hover, a.text-dark:focus {
   border: none;
   color: white;
   margin-right: 5px;
-}
-
-#content #findCars .filterResults {
-  background-color: pink;
 }
 
 #content #findCars .filterResults ul {
@@ -11093,8 +11269,51 @@ a.text-dark:hover, a.text-dark:focus {
 #content #findCars .filterResults ul li {
   margin-bottom: 30px;
   margin-right: 20px;
-  background-color: red;
   width: 20%;
+}
+
+@media (max-width: 991.98px) {
+  #content #findCars .filterResults ul li {
+    width: 30%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #findCars .filterResults ul li {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+#content #findCars .filterResults ul li a {
+  text-decoration: none;
+}
+
+#content #findCars .filterResults ul li .card {
+  border-radius: 0;
+  height: 100%;
+  border: none;
+}
+
+#content #findCars .filterResults ul li .card img {
+  width: 100%;
+  border-radius: 0;
+}
+
+#content #findCars .filterResults ul li .card ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#content #findCars .filterResults ul li .card ul li {
+  width: 100%;
+  margin: 0;
+}
+
+#content #findCars .filterResults ul li .card ul li span {
+  text-transform: uppercase;
 }
 
 #content #findCars .filterResults .tab-content.active {
