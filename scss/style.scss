@@ -193,7 +193,7 @@ $primary: #82c625;
 
 			>li {
 				// background-color: #82c625;
-				padding: 23px;
+				padding: 18px;
 
 				@include media-breakpoint-down(lg) {
 					padding: 15px;
@@ -259,7 +259,7 @@ $primary: #82c625;
 	//filtro
 	#findCars {
 		//introduction
-		.introduction{
+		.filterContainer{
 			background-color: black;
 			display: flex;
 			flex-direction: column;
@@ -268,7 +268,8 @@ $primary: #82c625;
 			padding-top: 5px;	
 			padding-left: 50px;
 			padding-right: 50px;
-			.present{
+			//title of filter
+			.filterTitle{
 				padding-bottom: 10px;
 				h1{
 					color: white;
@@ -283,133 +284,147 @@ $primary: #82c625;
 					}
 				}
 			}
-			.filter{
+			//find the options of you filter css
+			.filterOptions{
 				#nav {
-				list-style: none;
-				width: 100%;
-				padding: 16px 0 0 0;
-				display: flex;
-				margin: 0;
+					list-style: none;
+					width: 100%;
+					padding: 16px 0 0 0;
+					display: flex;
+					margin: 0;
 					li {
-						padding-right: 5px;
+						background-color:#535d5b;
+						height: 40px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+						cursor: pointer;
+						margin-right: 8px;
 						a {
-							background-color:#535d5b;
-							height: 40px;
-							display: flex;
-							align-items: center;
-							padding-right: 30px;
-							padding-left: 30px;
+							display: block;
 							color: white;
-							font-family: "Roboto";
-							font-size: 18px;
+							font-size: 14px;
 							font-weight: 500;
 							line-height: 24px;
-							cursor: pointer;
 							text-align: center;
 							text-transform: uppercase;
-
-							&.active {
+						}
+						&.active {
+							background-color: white;
+							a{
 								font-weight: bold;
-								background-color: white;
 								color: #535d5b;
 							}
-
-							&:hover {
+						
+						}
+						&:hover {
+							background-color: white;
+							a{
 								font-weight: bold;
-								background-color: white;
 								color: #535d5b;
 							}
-
-
+							
 						}
 					}
 				}
 				form {
 					margin: 0;
-					select {
+					.form-control{
+						-webkit-appearance: none;
+    					-moz-appearance: none;
 						background-color: white;
-						border: none;
+						border: 1px solid grey;
 						border-radius: 0px !important;
 						height: 40px;
+						color: grey;
+						position: relative;
+						cursor: pointer;
+					}
+					button{
+						height: 40px;	
+						background-color: white;
+						color: grey;
+						height: 100%;
+						margin-right: 40px;
+						display: flex;
+						align-items: center;
+						position: relative;
+
 					}
 				}
 			}
 		}
-		
-		
-		#tabs {
-			width: 100%;
-
-			.docs {
-				padding: 0;
-				list-style: none;
+		.filterResultNumbers{
+			margin-top: 30px;
+			margin-bottom: 30px;
+			.numberAvaliableCars{
+				height: 50px;
+				background-color: #5b675b;
+				display: flex;
+				align-items: center;
+				padding-left: 40px;
+				clip-path: polygon(3% 0, 100% 0%, 95% 100%, 0 100%);
+				p{
+					margin: 0;
+					font-size: 16px;
+					color: white;
+					font-weight: bold;
+					text-transform: uppercase;
+				}
+			}
+			.pagination{
 				margin: 0;
-
-				li {
-					margin-bottom: 8px;
-
-					.doc {
-						text-decoration: none;
-						padding: 24px;
-						background-color: yellow;
+				width: 100%;
+				.prev,.next{
+					display: flex;
+					height: 50px;
+					align-items: center;
+					background-color: black !important;
+					color: white;
+					border: none;
+					clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
+					border-radius: 0;
+					padding: 20px;
+					text-decoration: none;
+					margin-right: 5px;
+				}
+				.page-item{
+					.page-link{
+						background-color: #82c625;
+						height: 50px;
 						display: flex;
+						justify-content: center;
+						// clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
 						align-items: center;
-						cursor: pointer;
-
-						&:hover {
-							background-color: green;
-						}
-
-						span {
-							border-radius: 50px;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-							width: 40px;
-							height: 40px;
-							background-color: #36a48d;
-							margin-right: 16px;
-
-							img {
-								height: 16px;
-							}
-						}
-
-						p {
-							color: #535d5b;
-							font-family: "Rubik";
-							font-size: 18px;
-							font-weight: 500;
-							line-height: 24px;
-							margin-bottom: 0px !important;
-
-							@include media-breakpoint-only(xs) {
-								font-size: 14px;
-							}
-
-							small {
-								display: block;
-								color: #818181;
-								font-family: Roboto;
-								font-size: 14px;
-								font-weight: 400;
-								line-height: 16px;
-							}
-						}
-
+						padding: 15px;
+						border: none;
+						color: white;
+						margin-right: 5px;
 					}
 				}
 			}
-
-			.tab-content {
-				display: none;
+		}
+		.filterResults{
+			background-color: pink;
+			ul{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				li{
+					margin-bottom: 30px;
+					margin-right: 20px;
+					background-color: red;
+					width: 20%;
+				}
 			}
-
 			.tab-content.active {
 				display: block;
 				animation: fadeEffect 1s;
 			}
-
 			@keyframes fadeEffect {
 				from {
 					opacity: 0;
@@ -420,36 +435,6 @@ $primary: #82c625;
 				}
 			}
 		}
-		.numberAvaliableCars{
-			height: 50px;
-			background-color: #5b675b;
-			display: flex;
-			align-items: center;
-
-			p{
-				margin: 0;
-				padding-left: 10px;
-				color: white;
-				text-transform: uppercase;
-			}
-		}
-		ul.pagination{
-			margin: 0;
-			width: 100%;
-			.prev,.next{
-					display: flex;
-					height: 50px;
-					align-items: center;
-					background-color: black;
-					color: white;
-					border: none;
-			}
-			.page-link{
-				height: 50px;
-			}
-		}
-
-
 	}
 
 }

@@ -40,7 +40,7 @@
 							<p>Japón 222-0.862</p>
 						</div>
 					</div>
-					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex align-items-center ">
+					<div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex align-items-center p-0 ">
 						<div class="icon">
 							<i class="fas fa-phone"></i>
 						</div>
@@ -85,8 +85,8 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-xl-12 p-0 m-0">
-						<div class="introduction">
-							<div class="present d-flex justify-content-between align-items-center ">
+						<div class="filterContainer">
+							<div class="filterTitle d-flex justify-content-between align-items-center ">
 								<h1>
 									<small>Welcome to </small><span>autotradingbb</span>
 									<br>
@@ -95,20 +95,21 @@
 								<div class="logo">
 									<img src="img/logo.png" class="img-fluid">
 								</div>
-
 							</div>
-							<div class="filter">
+							<div class="filterOptions">
 								<div class="row d-flex align-items-end">
-									<div class="col-lg-4 p-0">
+									<div class="col-lg-4 p-0 ">
 										<ul id="nav" class="nav-marco">
-											<li><a id="#stock" data-tab="stock" class="active tab-link">stocklist</a></li>
-											<li><a id="#search" data-tab="search" class="tab-link">Search Inventory</a></li>
+											<li><a id="#stock" data-tab="stock" class="active tab-link">stocklist</a>
+											</li>
+											<li><a id="#search" data-tab="search" class="tab-link">Search Inventory</a>
+											</li>
 										</ul>
 									</div>
-									<div class="col-lg-8 p-0">
+									<div class="col-lg-8 p-0 ">
 										<form>
-											<div class="form-row">
-												<div class="col-lg-3">
+											<div class="form-row p-0">
+												<div class="col-lg-1 p-0">
 													<select class="form-control">
 														<option>Make</option>
 														<option>2</option>
@@ -117,7 +118,7 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-3">
+												<div class="col-lg-1 p-0">
 													<select class="form-control">
 														<option>Model</option>
 														<option>2</option>
@@ -126,15 +127,45 @@
 														<option>5</option>
 													</select>
 												</div>
-												<div class="col-lg-1">
-													<button>Price</button>
+												<div class="col-lg-2 p-0">
+													<select class="form-control">
+														<option>year from</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
 												</div>
-												<div class="col-lg-1">
-													<button>Year</button>
+												<div class="col-lg-2 p-0">
+													<select class="form-control">
+														<option>year to</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
 												</div>
-												<div class="col-lg-2">
-													<button>Search</button>
+												<div class="col-lg-2 p-0">
+													<select class="form-control">
+														<option>price from</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
 												</div>
+												<div class="col-lg-2 p-0">
+													<select class="form-control">
+														<option>price to</option>
+														<option>2</option>
+														<option>3</option>
+														<option>4</option>
+														<option>5</option>
+													</select>
+												</div>
+												<!-- <div class="col-lg-1 p-0">
+													<button>search</button>
+												</div> -->
 											</div>
 										</form>
 									</div>
@@ -144,74 +175,130 @@
 					</div>
 					<div class="col-xl-12">
 						<div class="container-fluid">
-							<div class="row">
-										<div class="col-lg-8">
-											<div class="numberAvaliableCars">
-												<p>47,400 cars avaliables from Japan</p>
+							<div class="filterResultNumbers">
+								<div class="row">
+									<div class="col-lg-8">
+										<div class="numberAvaliableCars">
+											<p>47,400 cars avaliables from Japan</p>
+										</div>
+									</div>
+									<div class="col-lg-4">
+
+										<ul class="pagination">
+											<li class="page-item"><a class=" prev" href="#">Previous</a></li>
+											<li class="page-item"><a class="page-link" href="#">1</a></li>
+											<li class="page-item"><a class="page-link" href="#">2</a></li>
+											<li class="page-item"><a class="page-link" href="#">3</a></li>
+											<li class="page-item"><a class=" next" href="#">Next</a></li>
+										</ul>
+
+									</div>
+								</div>
+							</div>
+							<div class="filterResults">
+								<ul>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<div class="card">
+												<img class="card-img-top" src="..." alt="Card image cap">
+												<div class="card-body">
+													<h5 class="card-title">Card title</h5>
+													<p class="card-text">Some quick example text to build on the card
+														title and make up the bulk of the card's content.</p>
+													<a href="#" class="btn btn-primary">Go somewhere</a>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li>
+										<div class="card">
+											<img class="card-img-top" src="..." alt="Card image cap">
+											<div class="card-body">
+												<h5 class="card-title">Card title</h5>
+												<p class="card-text">Some quick example text to build on the card title
+													and make up the bulk of the card's content.</p>
+												<a href="#" class="btn btn-primary">Go somewhere</a>
 											</div>
 										</div>
-										<div class="col-lg-4">
-											<nav aria-label="Page navigation example">
-												<ul class="pagination">
-													<li class="page-item"><a class="page-link prev" href="#">Previous</a></li>
-													<li class="page-item"><a class="page-link" href="#">1</a></li>
-													<li class="page-item"><a class="page-link" href="#">2</a></li>
-													<li class="page-item"><a class="page-link" href="#">3</a></li>
-													<li class="page-item"><a class="page-link next" href="#">Next</a></li>
-												</ul>
-											</nav>
+									</li>
+									<li>
+										<div class="card">
+											<img class="card-img-top" src="..." alt="Card image cap">
+											<div class="card-body">
+												<h5 class="card-title">Card title</h5>
+												<p class="card-text">Some quick example text to build on the card title
+													and make up the bulk of the card's content.</p>
+												<a href="#" class="btn btn-primary">Go somewhere</a>
+											</div>
 										</div>
-							</div>
-							<div id="tabs">
-										<div id="leyes" class="tab-content active">
-											<ul class="docs">
-												<li>
-													<a class="doc" href="#!">
-														<span><img src="img/download-white.png"></span>
-														<p>
-															Acta Constitutiva COOPMINHA
-															<small>12 Diciembre 2010</small>
-														</p>
-													</a>
-												</li>
-												<li>
-													<a class="doc" href="#!">
-														<span><img src="img/download-white.png"></span>
-														<p>
-															Acta Constitutiva COOPMINHA
-															<small>12 Diciembre 2010</small>
-														</p>
-													</a>
-												</li>
-												<li>
-													<a class="doc" href="#!">
-														<span><img src="img/download-white.png"></span>
-														<p>
-															Acta Constitutiva COOPMINHA
-															<small>12 Diciembre 2010</small>
-														</p>
-													</a>
-												</li>
-												<li>
-													<a class="doc" href="#!">
-														<span><img src="img/download-white.png"></span>
-														<p>
-															Acta Constitutiva COOPMINHA
-															<small>12 Diciembre 2010</small>
-														</p>
-													</a>
-												</li>
-												<li>
-													<a class="doc" href="#!">
-														<span><img src="img/download-white.png"></span>
-														<p>
-															Acta Constitutiva COOPMINHA
-															<small>12 Diciembre 2010</small>
-														</p>
-													</a>
-												</li>
-											</ul>
-										</div>
+									</li>
+								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -228,8 +315,8 @@
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" "></script>
-<script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script> <script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function () {
 			$('ul.nav-marco li a').click(function () {
@@ -241,15 +328,7 @@
 				$(this).addClass('active');
 				$("#" + tab_id).addClass('active');
 			})
-			$('#multi').mdbRange({
-				single: {
-					active: true,
-					multi: {
-						active: true,
-						rangeLength: 1
-					},
-				}
-			});
+
 		});
 	</script>
 </body>
