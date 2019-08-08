@@ -11668,6 +11668,12 @@ input[type=text]::placeholder {
   }
 }
 
+@media (max-width: 767.98px) {
+  #content #chooseUs .chooseCard .choose-text h4 {
+    text-align: center;
+  }
+}
+
 #content #chooseUs .chooseCard .choose-text p {
   font-size: 15px;
   color: grey;
@@ -11677,6 +11683,12 @@ input[type=text]::placeholder {
 @media (max-width: 991.98px) {
   #content #chooseUs .chooseCard .choose-text p {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #content #chooseUs .chooseCard .choose-text p {
+    text-align: center;
   }
 }
 
@@ -11986,6 +11998,13 @@ footer#footer .photoGallery .modal img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 767.98px) {
+  footer#footer .photoGallery .modal img {
+    width: 100%;
+    height: 320px;
+  }
 }
 
 footer#footer .photoGallery .demo {
