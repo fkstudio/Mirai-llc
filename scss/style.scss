@@ -889,6 +889,30 @@ input[type=text]{
 			}
 		}
 	}
+
+
+	//about us
+	.welcome-page-introduction{
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center -430px;
+		min-height: 200px;
+		display: flex;
+		align-items: center;
+		opacity: 0.6;
+		.caption{
+			width: 100%;
+			height: 100%;
+			z-index: 999999;
+			position: relative;
+			h2{
+				font-size: 30px;
+				font-weight: bold;
+				color: black;
+				text-transform: uppercase;
+			}
+		}
+	}
 }
 
 footer#footer {

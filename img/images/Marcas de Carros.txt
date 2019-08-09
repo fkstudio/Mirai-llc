@@ -1,0 +1,36 @@
+Toyota
+Nissan
+Mitsubishi
+Honda
+Mazda
+Suzuki
+Subaru
+Isuzu
+Daihatsu
+Mitsuoka
+Hino
+Ferrari
+Lexus
+Tadano
+Kawasaki
+Yamaha
+BMW
+Audi
+Mercedes-Benz
+Lamborghini
+Ford
+Jeep
+Lancer (?)
+Porsche
+Volkswagen
+Ashton Martin
+Peugeot
+Chevrolet
+Donkervoort
+Laverda
+Iseki
+Cadillac
+Maserati
+Volvo
+LandRover
+Abarth
