@@ -4,7 +4,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+body{
+	// overflow: hidden;
+}
 b p {
 	@include media-breakpoint-down(sm) {
 		font-size: 0.88rem; // 14 px
@@ -904,9 +906,6 @@ input[type=text]{
 		@include media-breakpoint-down(sm){
 			background-position: center -19px;
 		}
-		// // opacity: 0.6;
-		// background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-
 		.caption{
 			display: flex;
 			justify-content: center;
@@ -919,6 +918,10 @@ input[type=text]{
 				font-weight: bold;
 				color: white;
 				text-transform: uppercase;
+				@include media-breakpoint-down(md){
+					font-size: 20px;
+					text-align: center;
+				}
 				@include media-breakpoint-down(sm){
 					font-size: 18px;
 					text-align: center;
@@ -931,6 +934,41 @@ input[type=text]{
 				@include media-breakpoint-down(sm){
 					font-size: 14px;
 					text-align: center;
+				}
+			}
+			#filterTitle{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 290px;
+				height: 50px;
+				background-color: #000000;
+				position: relative;
+				// clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0 100%);
+				// border-right: 5px solid $primary;
+				@include media-breakpoint-down(md){
+					margin-top: 30px;
+				}
+				@include media-breakpoint-down(sm){
+					margin: 20px auto;
+				}
+				&::after{
+					position: absolute;
+					content: "";
+					background-color: #82c625;
+					width: 1146px;
+					left: 0;
+					height: 8px;
+					bottom: 0;
+					@include media-breakpoint-down(lg){
+						width:950px;
+					}
+					@include media-breakpoint-down(md){
+						width: 705px;
+					}
+					@include media-breakpoint-down(sm){
+						width: 100%
+					}
 				}
 			}
 		}
@@ -1030,6 +1068,104 @@ input[type=text]{
 				font-weight: bold;
 			}
 		}
+	}
+
+	//stock-list
+	.filterOptions {
+		width: 100%;
+		form {
+			margin: 0;
+
+			.form-control {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				background-color: white;
+				border: 1px solid grey;
+				border-radius: 0px !important;
+				height: 40px;
+				color: grey;
+				position: relative;
+				cursor: pointer;
+
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 10px;
+				}
+			}
+
+			button {
+				height: 40px;
+				background-color: black;
+				color: grey;
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				color: white;
+				font-weight: bold;
+				text-align: center;
+				border: none;
+				margin-left: 10px;
+				&:hover{
+					color: $primary;
+				}
+			}
+		}
+	}
+	#findCars-StockList{
+		@extend #findCars;
+		.filterResults{
+			.btn{
+				height: 35px;
+				clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0 100%);
+			}
+		}
+		.pagination {
+			margin: 0;
+			width: 100%;
+
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+				margin-top: 20px;
+			}
+
+			.prev,
+			.next {
+				display: flex;
+				height: 50px;
+				align-items: center;
+				background-color: black !important;
+				color: white;
+				border: none;
+				clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
+				border-radius: 0;
+				padding: 20px;
+				text-decoration: none;
+				margin-right: 5px;
+
+				@include media-breakpoint-down(md) {
+					clip-path: none;
+					padding: 10px
+				}
+			}
+
+			.page-item {
+				.page-link {
+					background-color: #82c625;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					// clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
+					align-items: center;
+					padding: 15px;
+					border: none;
+					color: white;
+					margin-right: 5px;
+				}
+			}
+		}
+
+	}
+	.logoCars{
+		border: 1px solid red;
 	}
 }
 
