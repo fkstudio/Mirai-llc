@@ -897,19 +897,137 @@ input[type=text]{
 		background-size: cover;
 		background-position: center -430px;
 		min-height: 200px;
-		display: flex;
-		align-items: center;
-		opacity: 0.6;
+		@include media-breakpoint-down(md){
+			background-position: center -185px;
+			margin-top: 70px;
+		}
+		@include media-breakpoint-down(sm){
+			background-position: center -19px;
+		}
+		// // opacity: 0.6;
+		// background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
 		.caption{
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			min-height: 200px;
+			background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 			width: 100%;
-			height: 100%;
-			z-index: 999999;
-			position: relative;
 			h2{
 				font-size: 30px;
 				font-weight: bold;
-				color: black;
+				color: white;
 				text-transform: uppercase;
+				@include media-breakpoint-down(sm){
+					font-size: 18px;
+					text-align: center;
+				}
+			}
+			p{
+				font-size: 16px;
+				color: white;
+				font-weight: bold;
+				@include media-breakpoint-down(sm){
+					font-size: 14px;
+					text-align: center;
+				}
+			}
+		}
+	}
+	.imgExp{
+		position: relative;
+		img{
+			position: relative;
+			top: -177px;
+			width: 590px;
+			left: -50px;
+			@include media-breakpoint-down(lg){
+				width: 473px;
+				left: 0;
+			}
+			@include media-breakpoint-down(md){
+				top: 0;
+				margin: 0 auto;
+				display: flex;
+			}
+			@include media-breakpoint-down(sm){
+				width: 290px;
+			}
+		}
+	}
+	.table{
+		margin-top: 40px;
+		tbody{
+			th,td{
+				width: 20px;
+				border: none;
+				padding-left: 0;
+				span{
+					color: $primary;
+					font-weight: bold;
+				}
+				a{
+					text-decoration: none;
+					cursor: pointer;
+					color: #000000;
+					&:hover{
+						color: $primary;
+					}
+				}
+			}
+		}
+	}
+	.infoCompany{
+		p{
+			font-size: 16px;
+			color: #535d5b;
+			padding-right: 20px;
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				padding-right: 0;
+			}
+		}
+	}
+	.dataInfoCompany{
+		margin-top: -113px;
+		margin-bottom: 50px;
+		@include media-breakpoint-down(lg){
+			margin-top:30px;
+		}
+		@include media-breakpoint-down(sm){
+			margin-top: 20px;
+		}
+		h3{
+			position: relative;
+			text-transform: uppercase;
+			margin: 0;
+			font-weight: bold;
+			color: white;
+			@include media-breakpoint-down(sm){
+				font-size: 18px;
+			}
+			&::after{
+				position: absolute;
+				content: "";
+				width: 1090px;
+				height: 88px;
+				left: -450px;
+				background-color: #82c625;
+				z-index: -1;
+				top: -16px;
+				clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
+				@include media-breakpoint-down(sm){
+				    width: 725px;
+					height: 68px;
+					left: -450px;
+					top: -13px;
+				}
+			}
+		}
+		p{
+			small{
+				font-weight: bold;
 			}
 		}
 	}
