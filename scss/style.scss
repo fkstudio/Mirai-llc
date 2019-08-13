@@ -4,9 +4,7 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-body{
-	// overflow: hidden;
-}
+
 b p {
 	@include media-breakpoint-down(sm) {
 		font-size: 0.88rem; // 14 px
@@ -1071,6 +1069,9 @@ input[type=text]{
 	}
 
 	//stock-list
+	.imgStocklist{
+		background-position: center -82px !important;
+	}
 	.filterOptions {
 		width: 100%;
 		form {
@@ -1165,7 +1166,25 @@ input[type=text]{
 
 	}
 	.logoCars{
-		border: 1px solid red;
+		// border: 1px solid red;
+		width: 100%;
+		ul{
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			list-style: none;
+			justify-content: center;
+			li{
+
+				img{
+					max-width: 600px !important;
+					height: 70px !important;
+					border: 1px solid black;
+				}
+			}
+		}
 	}
 }
 
