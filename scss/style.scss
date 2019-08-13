@@ -4,7 +4,9 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+body{
+	overflow-x: hidden;
+}
 b p {
 	@include media-breakpoint-down(sm) {
 		font-size: 0.88rem; // 14 px
@@ -36,6 +38,9 @@ h2 {
 }
 
 $primary: #82c625;
+.color-primay{
+	color: $primary;
+}
 .form-group{
 	label{
 		text-transform: uppercase;
@@ -47,24 +52,24 @@ $primary: #82c625;
 		}
 	}
 }
-input[type=text]{
-	border-radius: 0;
-	background-color: transparent !important;
-	border-bottom: 1px solid $primary;
-	border: 1px solid #82c625;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	&:focus{
-		font-size: 15px;
-		color: white;
-		font-weight: bold;
-		border: 1px solid #82c625;
-	}
-	&::placeholder{
-		color: white !important;
-	}
-}
+// input[type=text]{
+// 	border-radius: 0;
+// 	background-color: transparent !important;
+// 	border-bottom: 1px solid $primary;
+// 	border: 1px solid #82c625;
+// 	border-top: none;
+// 	border-left: none;
+// 	border-right: none;
+// 	&:focus{
+// 		font-size: 15px;
+// 		color: white;
+// 		font-weight: bold;
+// 		border: 1px solid #82c625;
+// 	}
+// 	&::placeholder{
+// 		color: white !important;
+// 	}
+// }
 .btn {
 	// background-color: rgb(80, 139, 176);
 	background-color: $primary;
@@ -1040,6 +1045,8 @@ input[type=text]{
 			margin: 0;
 			font-weight: bold;
 			color: white;
+			display: flex;
+			align-items: center;
 			@include media-breakpoint-down(sm){
 				font-size: 18px;
 			}
@@ -1069,6 +1076,7 @@ input[type=text]{
 	}
 
 	//stock-list
+
 	.imgStocklist{
 		background-position: center -82px !important;
 	}
@@ -1186,6 +1194,114 @@ input[type=text]{
 			}
 		}
 	}
+
+
+	//bank info
+	.dataBankInfo{
+		margin-top: 57px;
+		h3{
+			position: relative;
+			text-transform: uppercase;
+			margin: 0;
+			font-weight: bold;
+			color: white;
+			display: inline;
+
+			@include media-breakpoint-down(sm){
+				font-size: 18px;
+			}
+			&::after{
+				position: absolute;
+				content: "";
+				width: 1090px;
+				height: 88px;
+				left: -450px;
+				background-color: #82c625;
+				z-index: -1;
+				top: -26px;
+				clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
+				@include media-breakpoint-down(sm){
+				    width: 755px;
+					height: 68px;
+					left: -450px;
+					top: -26px;
+				}
+			}
+		}
+		h2{
+			background-color: $primary;
+			color: white;
+			font-size: 23px;
+			padding: 30px;
+			@include media-breakpoint-down(md){
+				font-size: 16px;
+			}
+			&:hover{
+				background-color: #a96733;
+			}
+		}
+		.table{
+			margin-top: 40px;
+			tbody{
+				td{
+					color: #a96733;
+					font-weight: bold;
+					font-size: 14px;
+					
+				}
+				th,td{
+					width: 20px;
+					border: none;
+					padding-left: 0;
+					span{
+						color: $primary;
+						font-weight: bold;
+					}
+					a{
+						text-decoration: none;
+						cursor: pointer;
+						color: #000000;
+						&:hover{
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	#number{
+		font-size: 70px;
+		margin: 0;
+		background-color: $primary;
+		padding: 30px;
+		text-align: center;
+		color: white;
+		font-weight: bold;
+		@include media-breakpoint-down(md){
+			font-size: 50px;
+		}
+	}
+	.regarding{
+		h4,p{
+			@include media-breakpoint-down(sm){
+				text-align: center;
+			}
+		}
+		h4{
+			color: #a96733;
+			font-size: 18px;
+			@include media-breakpoint-down(sm){
+				padding-top: 20px;
+				padding-bottom: 10px;
+			}
+		}
+		p{
+			color: #535d5b;
+			font-size: 14px;
+		}
+	}
+	
+
 }
 
 footer#footer {
@@ -1193,6 +1309,24 @@ footer#footer {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background-color: black;
+	input[type=text]{
+		border-radius: 0;
+		background-color: transparent !important;
+		border-bottom: 1px solid $primary;
+		border: 1px solid #82c625;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		&:focus{
+			font-size: 15px;
+			color: white;
+			font-weight: bold;
+			border: 1px solid #82c625;
+		}
+		&::placeholder{
+			color: white !important;
+		}
+	}
 	.logo{
 		width: 299px;
 		height: 60px;
