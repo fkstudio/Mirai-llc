@@ -729,8 +729,8 @@ $primary: #82c625;
 				display: flex;
 				align-items: center;
 				padding-left: 40px;
-				clip-path: polygon(3% 0, 100% 0%, 95% 100%, 0 100%);
-
+				// clip-path: polygon(3% 0, 100% 0%, 95% 100%, 0 100%);
+				clip-path: polygon(7% 0, 100% 0%, 95% 100%, 0% 100%);
 				p {
 					margin: 0;
 					font-size: 16px;
@@ -742,21 +742,17 @@ $primary: #82c625;
 						font-size: 14px;
 					}
 				}
-
 				@include media-breakpoint-down(sm) {
 					padding-left: 20px;
 				}
 			}
-
 			.pagination {
 				margin: 0;
 				width: 100%;
-
 				@include media-breakpoint-down(md) {
 					justify-content: center;
 					margin-top: 20px;
 				}
-
 				.prev,
 				.next {
 					display: flex;
@@ -765,12 +761,10 @@ $primary: #82c625;
 					background-color: black !important;
 					color: white;
 					border: none;
-					clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
-					border-radius: 0;
 					padding: 20px;
+					border-radius: 0;
 					text-decoration: none;
 					margin-right: 5px;
-
 					@include media-breakpoint-down(md) {
 						clip-path: none;
 						padding: 10px
@@ -783,7 +777,6 @@ $primary: #82c625;
 						height: 50px;
 						display: flex;
 						justify-content: center;
-						// clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
 						align-items: center;
 						padding: 15px;
 						border: none;
@@ -1244,7 +1237,7 @@ $primary: #82c625;
 		.filterResults{
 			.btn{
 				height: 35px;
-				clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0 100%);
+				// clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0 100%);
 			}
 		}
 		.pagination {
@@ -1264,7 +1257,6 @@ $primary: #82c625;
 				background-color: black !important;
 				color: white;
 				border: none;
-				clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
 				border-radius: 0;
 				padding: 20px;
 				text-decoration: none;
