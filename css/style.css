@@ -12209,32 +12209,32 @@ body {
   font-size: 14px;
 }
 
-#content .create-form .form-group input[type=text] {
+#content .create-form .form-group input[type=text], #content .create-form .form-group textarea {
   border-radius: 0;
   background-color: transparent !important;
   border: 1px solid #82c625;
 }
 
-#content .create-form .form-group input[type=text]:focus {
+#content .create-form .form-group input[type=text]:focus, #content .create-form .form-group textarea:focus {
   font-size: 15px;
   color: #535d5b;
   font-weight: bold;
   border: 1px solid #82c625;
 }
 
-#content .create-form .form-group input[type=text]::-webkit-input-placeholder {
+#content .create-form .form-group input[type=text]::-webkit-input-placeholder, #content .create-form .form-group textarea::-webkit-input-placeholder {
   color: #535d5b !important;
 }
 
-#content .create-form .form-group input[type=text]:-ms-input-placeholder {
+#content .create-form .form-group input[type=text]:-ms-input-placeholder, #content .create-form .form-group textarea:-ms-input-placeholder {
   color: #535d5b !important;
 }
 
-#content .create-form .form-group input[type=text]::-ms-input-placeholder {
+#content .create-form .form-group input[type=text]::-ms-input-placeholder, #content .create-form .form-group textarea::-ms-input-placeholder {
   color: #535d5b !important;
 }
 
-#content .create-form .form-group input[type=text]::placeholder {
+#content .create-form .form-group input[type=text]::placeholder, #content .create-form .form-group textarea::placeholder {
   color: #535d5b !important;
 }
 
@@ -12246,6 +12246,12 @@ body {
   #content .listInfoCreateUser {
     text-align: center;
   }
+}
+
+#content .info a {
+  color: #82c625;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer#footer {
