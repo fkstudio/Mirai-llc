@@ -10623,6 +10623,11 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .btn {
   background-color: #82c625;
   display: -webkit-box;
@@ -10650,6 +10655,9 @@ body {
   left: 0;
   width: 100%;
   bottom: auto;
+  background: rgba(234, 237, 240, 0.8);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 991.98px) {
@@ -10667,110 +10675,95 @@ body {
   z-index: 1000;
 }
 
-#header a {
-  text-decoration: none;
-  color: white;
-  color: white;
+#header .topHeader h3 {
+  color: #82c625;
+  font-size: 15px;
+  font-weight: bold;
   margin: 0;
-  display: inline;
-  font-size: 14px;
 }
 
 @media (max-width: 1199.98px) {
-  #header a {
+  #header .topHeader h3 {
     font-size: 12px;
   }
 }
 
-#header p {
+#header .topHeader p {
+  font-size: 14px;
   color: white;
   margin: 0;
-  display: inline;
-  font-size: 14px;
 }
 
 @media (max-width: 1199.98px) {
-  #header p {
-    font-size: 12px !important;
+  #header .topHeader p {
+    font-size: 12px;
   }
 }
 
-@media (max-width: 991.98px) {
-  #header p {
-    font-size: 13px;
-  }
+#header .topHeader a {
+  font-size: 14px;
+  color: white;
 }
 
-#header .firtsHeader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
+#header .topHeader .form-group {
+  width: 50%;
   height: 100%;
 }
 
-#header .firtsHeader p {
-  margin: 0;
-  font-size: 12px;
+@media (max-width: 1199.98px) {
+  #header .topHeader .form-group {
+    width: 100%;
+  }
 }
 
-#header .firtsHeader a {
-  text-decoration: none;
+#header .topHeader .form-group .form-control {
+  padding: 10px;
+  height: 20px;
+  font-size: 14px;
   color: white;
-  font-weight: bold;
-  cursor: pointer;
+  background: transparent;
+  border: none;
 }
 
-@media (max-width: 991.98px) {
-  #header .firtsHeader {
-    padding: 12px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+@media (max-width: 1199.98px) {
+  #header .topHeader .form-group .form-control {
+    padding: 0;
   }
 }
 
-@media (max-width: 991.98px) {
-  #header .firtsHeader {
-    display: none;
-  }
+#header .topHeader .row:nth-child(1) {
+  position: relative;
 }
 
-#header .secondHeader {
+#header .topHeader .row:nth-child(1)::after {
+  position: absolute;
+  content: "";
   width: 100%;
+  height: 1.5px;
+  background: #535d5b;
+  bottom: 1px;
 }
 
-#header .secondHeader h3 {
-  color: #82c625;
-  font-size: 15px;
-}
-
-#header .secondHeader .logo img {
+#header .topHeader img {
   width: 290px;
   height: 50px;
 }
 
 @media (max-width: 1199.98px) {
-  #header .secondHeader .logo img {
+  #header .topHeader img {
     height: 50px;
     width: 220px;
   }
 }
 
 @media (max-width: 991.98px) {
-  #header .secondHeader .logo img {
+  #header .topHeader img {
     height: 60px;
     width: 310px;
   }
 }
 
-#header .secondHeader .icon {
+#header .topHeader .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10784,31 +10777,63 @@ body {
   padding: 20px;
 }
 
+#header .topHeader .icon span {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid #a96733;
+}
+
+#header .topHeader .icon .fas {
+  font-size: 13px;
+}
+
+#header .topHeader .icon .fa-phone {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 @media (max-width: 991.98px) {
-  #header .secondHeader .icon {
+  #header .topHeader .icon {
     font-size: 25px;
   }
 }
 
-#header .secondHeader #social {
+#header .topHeader #social {
   color: white;
   text-transform: uppercase;
+  font-size: 15px;
   font-weight: bold;
-  font-size: 12px;
+  margin-bottom: 4px;
 }
 
-#header .secondHeader .socialIcons {
+@media (max-width: 1199.98px) {
+  #header .topHeader #social {
+    font-size: 12px;
+  }
+}
+
+#header .topHeader .socialIcons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#header .secondHeader .socialIcons a {
+#header .topHeader .socialIcons a {
   text-decoration: none;
   cursor: pointer;
 }
 
-#header .secondHeader .socialIcons a span {
+#header .topHeader .socialIcons a span {
   width: 25px;
   height: 25px;
   display: -webkit-box;
@@ -10824,13 +10849,13 @@ body {
   background-color: #82c625;
 }
 
-#header .secondHeader .socialIcons a span i {
+#header .topHeader .socialIcons a span i {
   font-size: 13px;
   color: white;
 }
 
 @media (max-width: 991.98px) {
-  #header .secondHeader {
+  #header .topHeader {
     display: none;
   }
 }
@@ -10907,13 +10932,15 @@ body {
 }
 
 #header .main-nav {
-  background-color: #c1c1c3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: rgba(234, 237, 240, 0.8);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 991.98px) {
@@ -10991,13 +11018,16 @@ body {
 #header .main-nav .main-menu > li {
   padding: 13px;
   z-index: 2;
+  position: relative;
 }
 
 #header .main-nav .main-menu > li > a {
   text-decoration: none;
   text-transform: uppercase;
-  color: black;
-  font-size: 15px;
+  font-weight: 700;
+  font-style: normal;
+  color: #232628;
+  font-size: 13px;
 }
 
 @media (max-width: 1199.98px) {
@@ -11019,6 +11049,9 @@ body {
   font-weight: bold;
   text-transform: inherit;
   position: relative;
+  font-size: 13px;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #header .main-nav .main-menu > li .login i {
@@ -11053,14 +11086,26 @@ body {
   background-color: #82c625;
 }
 
+@media (max-width: 1199.98px) {
+  #header .main-nav .main-menu > li {
+    padding: 10px;
+  }
+}
+
 #header .main-nav .main-menu::after {
   position: absolute;
   content: "";
   z-index: 1;
-  width: 21%;
+  width: 33%;
   background-color: #82c625;
   height: 50px;
   right: 0;
+}
+
+@media (max-width: 1199.98px) {
+  #header .main-nav .main-menu::after {
+    width: 32.333%;
+  }
 }
 
 @media (max-width: 991.98px) {

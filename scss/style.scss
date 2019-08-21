@@ -57,7 +57,10 @@ $primary: #82c625;
 		}
 	}
 }
-
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
 .btn {
 	// background-color: rgb(80, 139, 176);
 	background-color: $primary;
@@ -83,7 +86,8 @@ $primary: #82c625;
 	left: 0;
 	width: 100%;
 	bottom: auto;
-
+	background: rgba(234,237,240,.8);
+	box-shadow: 0 0 4px rgba(0,0,0,.4);
 	@include media-breakpoint-down(md) {
 		position: relative;
 		left: auto;
@@ -93,83 +97,63 @@ $primary: #82c625;
 #header {
 	background-color: black;
 	width: 100%;
-	// position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 1000;
-
-	a {
-		text-decoration: none;
-		color: white;
-		color: white;
-		margin: 0;
-		display: inline;
-		font-size: 14px;
-
-		@include media-breakpoint-down(lg) {
-			font-size: 12px;
-		}
-	}
-
-	p {
-		color: white;
-		margin: 0;
-		display: inline;
-		font-size: 14px;
-
-		@include media-breakpoint-down(lg) {
-			font-size: 12px !important;
-		}
-
-		@include media-breakpoint-down(md) {
-			font-size: 13px;
-		}
-	}
-
-	.firtsHeader {
-		display: flex;
-		align-items: center;
-		justify-content: space-around;
-		width: 100%;
-		height: 100%;
-
-		p {
-			margin: 0;
-			font-size: 12px;
-		}
-
-		a {
-			text-decoration: none;
-			color: white;
-			font-weight: bold;
-			cursor: pointer;
-		}
-
-		// @include media-breakpoint-up(lg) {
-		// 	padding: 15px;
-		// }
-
-		@include media-breakpoint-down(md) {
-			padding: 12px;
-			flex-direction: column;
-		}
-
-		@include media-breakpoint-down(md) {
-			display: none;
-		}
-	}
-
-	.secondHeader {
-		width: 100%;
+	.topHeader {
 
 		h3 {
 			color: $primary;
 			font-size: 15px;
+			font-weight: bold;
+			margin: 0;
+			@include media-breakpoint-down(lg){
+				font-size: 12px
+			}
+		}
+		p{
+			font-size: 14px;
+			color:white;
+			margin: 0;
+			@include media-breakpoint-down(lg){
+				font-size: 12px
+			}
+		}
+		a{
+			font-size: 14px;
+			color:white;
+		}
+		.form-group{
+			width: 50%;
+			height: 100%;
+			@include media-breakpoint-down(lg){
+				width: 100%;
+			}
+			.form-control{
+				padding: 10px;
+				height:20px;
+				font-size: 14px;
+				color:white;
+				background: transparent;
+				border: none;
+				@include media-breakpoint-down(lg){
+					padding: 0;
+				}
+			}
 		}
 
-
-		.logo {
-			img {
+		.row:nth-child(1){
+			position: relative;
+			&::after{
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 1.5px;
+				background: #535d5b;
+				bottom: 1px;
+			}
+		}
+		img {
 				width: 290px;
 				height: 50px;
 
@@ -182,7 +166,6 @@ $primary: #82c625;
 					height: 60px;
 					width: 310px;
 				}
-			}
 		}
 
 		.icon {
@@ -191,7 +174,21 @@ $primary: #82c625;
 			align-items: center;
 			color: #a96733;
 			padding: 20px;
-
+			span{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #a96733;
+			}
+			.fas{
+				font-size: 13px;
+			}
+			.fa-phone{
+				transform: rotate(180deg)
+			}
 			@include media-breakpoint-down(md) {
 				font-size: 25px;
 			}
@@ -200,27 +197,27 @@ $primary: #82c625;
 		#social {
 			color: white;
 			text-transform: uppercase;
+			font-size: 15px;
 			font-weight: bold;
-			font-size: 12px;
+			margin-bottom: 4px;
+			@include media-breakpoint-down(lg){
+				font-size: 12px
+			}
 		}
 
 		.socialIcons {
 			display: flex;
-
 			a {
 				text-decoration: none;
 				cursor: pointer;
-
 				span {
 					width: 25px;
 					height: 25px;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					// background-color: grey;
 					margin-right: 5px;
 					background-color: $primary;
-
 					i {
 						font-size: 13px;
 						color: white;
@@ -287,10 +284,11 @@ $primary: #82c625;
 	}
 
 	.main-nav {
-		background-color: #c1c1c3;
 		display: flex;
 		justify-content: center;
 
+		background: rgba(234,237,240,.8);
+		box-shadow: 0 0 4px rgba(0,0,0,.4);
 		@include media-breakpoint-down(md) {
 			justify-content: flex-start;
 			display: flex;
@@ -338,13 +336,14 @@ $primary: #82c625;
 			>li {
 				padding: 13px;
 				z-index: 2;
-
+				position: relative;
 				>a {
 					text-decoration: none;
 					text-transform: uppercase;
-					color: black;
-					font-size: 15px;
-
+					font-weight: 700;
+					font-style: normal;
+					color: #232628;
+					font-size: 13px;
 					@include media-breakpoint-down(lg) {
 						font-size: 11px;
 					}
@@ -361,7 +360,9 @@ $primary: #82c625;
 					font-weight: bold;
 					text-transform: inherit;
 					position: relative;
-
+					font-size: 13px;
+					font-weight: 700;
+					font-style: normal;
 					i {
 						color: black;
 						padding-right: 10px;
@@ -392,19 +393,22 @@ $primary: #82c625;
 				&:nth-of-type(9) {
 					background-color: #82c625;
 				}
-
+				@include media-breakpoint-down(lg){
+					padding: 10px;
+				}
 			}
 
 			&::after {
 				position: absolute;
 				content: "";
 				z-index: 1;
-				width: 21%;
+				width: 33%;
 				background-color: #82c625;
-				// height: 25%;
 				height: 50px;
 				right: 0;
-
+				@include media-breakpoint-down(lg){
+					width: 32.333%;
+				}
 				@include media-breakpoint-down(md) {
 					display: none;
 				}
