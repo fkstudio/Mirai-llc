@@ -39,6 +39,11 @@ h2 {
 	}
 }
 
+p {
+	font-size: 14px;
+	color: #535d5b;
+}
+
 $primary: #82c625;
 
 .color-primay {
@@ -57,10 +62,12 @@ $primary: #82c625;
 		}
 	}
 }
-a{
-	text-decoration: none;
+
+a {
+	text-decoration: none !important;
 	cursor: pointer;
 }
+
 .btn {
 	// background-color: rgb(80, 139, 176);
 	background-color: $primary;
@@ -86,11 +93,25 @@ a{
 	left: 0;
 	width: 100%;
 	bottom: auto;
-	background: rgba(234,237,240,.8);
-	box-shadow: 0 0 4px rgba(0,0,0,.4);
+	background: rgba(234, 237, 240, .8);
+	box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+
 	@include media-breakpoint-down(md) {
 		position: relative;
 		left: auto;
+	}
+}
+
+.img-one {
+	position: relative;
+
+	img {
+		position: absolute;
+		top: -140px;
+
+		@include media-breakpoint-down(md) {
+			position: static;
+		}
 	}
 }
 
@@ -100,6 +121,7 @@ a{
 	top: 0;
 	left: 0;
 	z-index: 1000;
+
 	.topHeader {
 
 		h3 {
@@ -107,44 +129,53 @@ a{
 			font-size: 15px;
 			font-weight: bold;
 			margin: 0;
-			@include media-breakpoint-down(lg){
+
+			@include media-breakpoint-down(lg) {
 				font-size: 12px
 			}
 		}
-		p{
+
+		p {
 			font-size: 14px;
-			color:white;
+			color: white;
 			margin: 0;
-			@include media-breakpoint-down(lg){
+
+			@include media-breakpoint-down(lg) {
 				font-size: 12px
 			}
 		}
-		a{
+
+		a {
 			font-size: 14px;
-			color:white;
+			color: white;
 		}
-		.form-group{
+
+		.form-group {
 			width: 50%;
 			height: 100%;
-			@include media-breakpoint-down(lg){
+
+			@include media-breakpoint-down(lg) {
 				width: 100%;
 			}
-			.form-control{
+
+			.form-control {
 				padding: 10px;
-				height:20px;
+				height: 20px;
 				font-size: 14px;
-				color:white;
+				color: white;
 				background: transparent;
 				border: none;
-				@include media-breakpoint-down(lg){
+
+				@include media-breakpoint-down(lg) {
 					padding: 0;
 				}
 			}
 		}
 
-		.row:nth-child(1){
+		.row:nth-child(1) {
 			position: relative;
-			&::after{
+
+			&::after {
 				position: absolute;
 				content: "";
 				width: 100%;
@@ -153,19 +184,20 @@ a{
 				bottom: 1px;
 			}
 		}
+
 		img {
-				width: 290px;
+			width: 290px;
+			height: 50px;
+
+			@include media-breakpoint-down(lg) {
 				height: 50px;
+				width: 220px;
+			}
 
-				@include media-breakpoint-down(lg) {
-					height: 50px;
-					width: 220px;
-				}
-
-				@include media-breakpoint-down(md) {
-					height: 60px;
-					width: 310px;
-				}
+			@include media-breakpoint-down(md) {
+				height: 60px;
+				width: 310px;
+			}
 		}
 
 		.icon {
@@ -174,7 +206,8 @@ a{
 			align-items: center;
 			color: #a96733;
 			padding: 20px;
-			span{
+
+			span {
 				width: 25px;
 				height: 25px;
 				border-radius: 50%;
@@ -183,12 +216,15 @@ a{
 				justify-content: center;
 				border: 1px solid #a96733;
 			}
-			.fas{
+
+			.fas {
 				font-size: 13px;
 			}
-			.fa-phone{
+
+			.fa-phone {
 				transform: rotate(180deg)
 			}
+
 			@include media-breakpoint-down(md) {
 				font-size: 25px;
 			}
@@ -200,16 +236,19 @@ a{
 			font-size: 15px;
 			font-weight: bold;
 			margin-bottom: 4px;
-			@include media-breakpoint-down(lg){
+
+			@include media-breakpoint-down(lg) {
 				font-size: 12px
 			}
 		}
 
 		.socialIcons {
 			display: flex;
+
 			a {
 				text-decoration: none;
 				cursor: pointer;
+
 				span {
 					width: 25px;
 					height: 25px;
@@ -218,6 +257,7 @@ a{
 					align-items: center;
 					margin-right: 5px;
 					background-color: $primary;
+
 					i {
 						font-size: 13px;
 						color: white;
@@ -287,8 +327,9 @@ a{
 		display: flex;
 		justify-content: center;
 
-		background: rgba(234,237,240,.8);
-		box-shadow: 0 0 4px rgba(0,0,0,.4);
+		background: rgba(234, 237, 240, .8);
+		box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+
 		@include media-breakpoint-down(md) {
 			justify-content: flex-start;
 			display: flex;
@@ -337,6 +378,7 @@ a{
 				padding: 13px;
 				z-index: 2;
 				position: relative;
+
 				>a {
 					text-decoration: none;
 					text-transform: uppercase;
@@ -344,6 +386,7 @@ a{
 					font-style: normal;
 					color: #232628;
 					font-size: 13px;
+
 					@include media-breakpoint-down(lg) {
 						font-size: 11px;
 					}
@@ -363,6 +406,7 @@ a{
 					font-size: 13px;
 					font-weight: 700;
 					font-style: normal;
+
 					i {
 						color: black;
 						padding-right: 10px;
@@ -393,7 +437,8 @@ a{
 				&:nth-of-type(9) {
 					background-color: #82c625;
 				}
-				@include media-breakpoint-down(lg){
+
+				@include media-breakpoint-down(lg) {
 					padding: 10px;
 				}
 			}
@@ -406,9 +451,11 @@ a{
 				background-color: #82c625;
 				height: 50px;
 				right: 0;
-				@include media-breakpoint-down(lg){
+
+				@include media-breakpoint-down(lg) {
 					width: 32.333%;
 				}
+
 				@include media-breakpoint-down(md) {
 					display: none;
 				}
@@ -426,6 +473,7 @@ a{
 		padding-top: 70px;
 	}
 
+	//HOME
 	.slide-content {
 		position: relative;
 		width: 100%;
@@ -569,334 +617,320 @@ a{
 	}
 
 	//filtro
-	#findCars {
+	// #findCars {
 
-		//introduction
-		.filterContainer {
-			background-color: black;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			justify-content: center;
-			padding-top: 5px;
-			padding-left: 50px;
-			padding-right: 50px;
+	//introduction
+	.filterContainer {
+		background-color: black;
+		flex-direction: column;
+		padding-top: 5px;
 
-			//title of filter
-			.filterTitle {
-				padding-bottom: 10px;
+		//title of filter
+		.filterTitle {
+			padding-bottom: 10px;
 
-				h1 {
-					color: white;
-					text-transform: uppercase;
-					font-size: 30px;
-					margin: 0;
+			h1 {
+				color: white;
+				text-transform: uppercase;
+				font-size: 30px;
+				margin: 0;
+				font-weight: bold;
 
-					small {
-						font-size: 20px;
-						font-weight: bold;
+				small {
+					font-weight: bold;
+				}
 
-						@include media-breakpoint-down(md) {
-							font-size: 16px;
-						}
+				span {
+					color: $primary;
+				}
 
-						@include media-breakpoint-down(sm) {
-							font-size: 14px;
-						}
+				@include media-breakpoint-down(md) {
+					font-size: 20px;
+				}
+
+				@include media-breakpoint-down(sm) {
+					font-size: 14px;
+				}
+
+				br {
+					@include media-breakpoint-down(sm) {
+						display: none;
+					}
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+
+			.logo {
+				@include media-breakpoint-down(sm) {
+					margin-top: 30px;
+				}
+
+				img {
+					width: 320px;
+					height: 50px;
+
+					@include media-breakpoint-down(sm) {
+						width: 100%;
+						height: 46px;
+					}
+				}
+			}
+		}
+
+		//find the options of you filter css
+		.filterOptions {
+			#nav {
+				list-style: none;
+				// width: 100%;
+				padding: 16px 0 0 0;
+				display: flex;
+				margin: 0;
+
+				li {
+					background-color: #535d5b;
+					height: 40px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 100%;
+					cursor: pointer;
+					margin-right: 8px;
+
+					a {
+						display: block;
+						color: white;
+						font-size: 14px;
+						font-weight: 500;
+						line-height: 24px;
+						text-align: center;
+						text-transform: uppercase;
 					}
 
-					span {
-						color: $primary;
+					&.active {
+						background-color: white;
+
+						a {
+							font-weight: bold;
+							color: #535d5b;
+						}
+
 					}
 
-					@include media-breakpoint-down(md) {
-						font-size: 20px;
+					&:hover {
+						background-color: white;
+
+						a {
+							font-weight: bold;
+							color: #535d5b;
+						}
+
 					}
 
 					@include media-breakpoint-down(sm) {
-						font-size: 14px;
-					}
-
-					br {
-						@include media-breakpoint-down(sm) {
-							display: none;
-						}
+						margin-bottom: 10px;
 					}
 				}
 
 				@include media-breakpoint-down(sm) {
 					flex-direction: column;
 				}
-
-				.logo {
-					@include media-breakpoint-down(sm) {
-						margin-top: 30px;
-					}
-
-					img {
-						width: 320px;
-						height: 50px;
-
-						@include media-breakpoint-down(sm) {
-							width: 100%;
-							height: 46px;
-						}
-					}
-				}
 			}
 
-			//find the options of you filter css
-			.filterOptions {
-				#nav {
-					list-style: none;
-					width: 100%;
-					padding: 16px 0 0 0;
-					display: flex;
-					margin: 0;
-
-					li {
-						background-color: #535d5b;
-						height: 40px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						width: 100%;
-						cursor: pointer;
-						margin-right: 8px;
-
-						a {
-							display: block;
-							color: white;
-							font-size: 14px;
-							font-weight: 500;
-							line-height: 24px;
-							text-align: center;
-							text-transform: uppercase;
-						}
-
-						&.active {
-							background-color: white;
-
-							a {
-								font-weight: bold;
-								color: #535d5b;
-							}
-
-						}
-
-						&:hover {
-							background-color: white;
-
-							a {
-								font-weight: bold;
-								color: #535d5b;
-							}
-
-						}
-
-						@include media-breakpoint-down(sm) {
-							margin-bottom: 10px;
-						}
-					}
-
-					@include media-breakpoint-down(sm) {
-						flex-direction: column;
-					}
-				}
-
-				form {
-					margin: 0;
-
-					.form-control {
-						-webkit-appearance: none;
-						-moz-appearance: none;
-						background-color: white;
-						border: 1px solid grey;
-						border-radius: 0px !important;
-						height: 40px;
-						color: grey;
-						position: relative;
-						cursor: pointer;
-
-						@include media-breakpoint-down(sm) {
-							margin-bottom: 10px;
-						}
-					}
-
-					button {
-						height: 40px;
-						background-color: white;
-						color: grey;
-						height: 100%;
-						margin-right: 40px;
-						display: flex;
-						align-items: center;
-						position: relative;
-
-					}
-				}
-			}
-		}
-
-		.filterResultNumbers {
-			margin-top: 30px;
-			margin-bottom: 30px;
-
-			.numberAvaliableCars {
-				height: 50px;
-				background-color: $primary;
-				display: flex;
-				align-items: center;
-				padding-left: 40px;
-				// clip-path: polygon(3% 0, 100% 0%, 95% 100%, 0 100%);
-				// clip-path: polygon(7% 0, 100% 0%, 95% 100%, 0% 100%);
-				clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
-
-				p {
-					margin: 0;
-					font-size: 16px;
-					color: white;
-					font-weight: bold;
-					text-transform: uppercase;
-
-					@include media-breakpoint-down(sm) {
-						font-size: 14px;
-					}
-				}
-
-				@include media-breakpoint-down(sm) {
-					padding-left: 20px;
-				}
-			}
-
-			.pagination {
+			form {
 				margin: 0;
-				width: 100%;
 
-				@include media-breakpoint-down(md) {
-					justify-content: center;
-					margin-top: 20px;
+				.form-control {
+					-webkit-appearance: none;
+					-moz-appearance: none;
+					background-color: white;
+					border: 1px solid grey;
+					border-radius: 0px !important;
+					height: 40px;
+					color: grey;
+					position: relative;
+					cursor: pointer;
+
+					@include media-breakpoint-down(sm) {
+						margin-bottom: 10px;
+					}
 				}
 
-				.prev,
-				.next {
+				button {
+					height: 40px;
+					background-color: white;
+					color: grey;
+					height: 100%;
+					margin-right: 40px;
 					display: flex;
-					height: 50px;
 					align-items: center;
-					background-color: black !important;
-					color: white;
-					border: none;
-					padding: 20px;
-					border-radius: 0;
-					text-decoration: none;
-					margin-right: 5px;
+					position: relative;
 
-					@include media-breakpoint-down(md) {
-						clip-path: none;
-						padding: 10px
-					}
 				}
-
-				.page-item {
-					.page-link {
-						background-color: #82c625;
-						height: 50px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						padding: 15px;
-						border: none;
-						color: white;
-						margin-right: 5px;
-					}
-				}
-			}
-		}
-
-		.filterResults {
-			ul {
-				padding: 0;
-				margin: 0;
-				list-style: none;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-
-				li {
-					margin-bottom: 30px;
-					margin-right: 20px;
-					width: 23%;
-
-					@include media-breakpoint-down(md) {
-						width: 30%;
-					}
-
-					@include media-breakpoint-down(sm) {
-						width: 100%;
-						margin-right: 0;
-					}
-
-					a {
-						text-decoration: none;
-					}
-
-					.card {
-
-						border-radius: 0;
-						height: 100%;
-						border: none;
-						display: flex;
-						justify-content: center;
-						align-items: center !important;
-
-						.card-body {
-							padding-top: 3px;
-							padding-left: 0px;
-							padding-right: 3px;
-						}
-
-						img {
-							width: 90%;
-							height: 194px !important;
-							border-radius: 0;
-							object-fit: cover;
-							display: flex;
-							justify-content: center;
-
-							@include media-breakpoint-down(lg) {
-								width: 100%;
-							}
-						}
-
-						ul {
-							flex-direction: column;
-
-							li {
-								width: 100%;
-								margin: 0;
-								color: black;
-								font-weight: bold;
-								font-size: 14px;
-
-								span {
-									text-transform: uppercase;
-									color: #82c625;
-									font-weight: 400;
-								}
-							}
-						}
-					}
-				}
-			}
-
-			.moreCars {
-				width: 200px;
-				height: 50px;
-				text-transform: capitalize;
-				font-weight: 500;
 			}
 		}
 	}
+
+	.filterResultNumbers {
+		margin-top: 30px;
+		margin-bottom: 30px;
+
+		.numberAvaliableCars {
+			height: 50px;
+			background-color: $primary;
+			display: flex;
+			align-items: center;
+			padding-left: 40px;
+			clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
+
+			p {
+				margin: 0;
+				font-size: 16px;
+				color: white;
+				font-weight: bold;
+				text-transform: uppercase;
+
+				@include media-breakpoint-down(sm) {
+					font-size: 14px;
+				}
+			}
+
+			@include media-breakpoint-down(sm) {
+				padding-left: 20px;
+			}
+		}
+
+		.pagination {
+			margin: 0;
+			width: 100%;
+
+			@include media-breakpoint-down(md) {
+				justify-content: center;
+				margin-top: 20px;
+			}
+
+			.prev,
+			.next {
+				display: flex;
+				height: 50px;
+				align-items: center;
+				background-color: black !important;
+				color: white;
+				border: none;
+				padding: 20px;
+				border-radius: 0;
+				text-decoration: none;
+				margin-right: 5px;
+
+				@include media-breakpoint-down(md) {
+					clip-path: none;
+					padding: 10px
+				}
+			}
+
+			.page-item {
+				.page-link {
+					background-color: #82c625;
+					height: 50px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 15px;
+					border: none;
+					color: white;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.filterResults {
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			li {
+				margin-bottom: 30px;
+				margin-right: 20px;
+				width: 23%;
+
+				@include media-breakpoint-down(md) {
+					width: 30%;
+				}
+
+				@include media-breakpoint-down(sm) {
+					width: 100%;
+					margin-right: 0;
+				}
+
+				a {
+					text-decoration: none;
+				}
+
+				.card {
+
+					border-radius: 0;
+					height: 100%;
+					border: none;
+					display: flex;
+					justify-content: center;
+					align-items: center !important;
+
+					.card-body {
+						padding-top: 3px;
+						padding-left: 0px;
+						padding-right: 3px;
+					}
+
+					img {
+						width: 90%;
+						height: 194px !important;
+						border-radius: 0;
+						object-fit: cover;
+						display: flex;
+						justify-content: center;
+
+						@include media-breakpoint-down(lg) {
+							width: 100%;
+						}
+					}
+
+					ul {
+						flex-direction: column;
+
+						li {
+							width: 100%;
+							margin: 0;
+							color: black;
+							font-weight: bold;
+							font-size: 14px;
+
+							span {
+								text-transform: uppercase;
+								color: #82c625;
+								font-weight: 400;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.moreCars {
+			width: 200px;
+			height: 50px;
+			text-transform: capitalize;
+			font-weight: 500;
+		}
+	}
+
+	// }
 
 	#informationAboutUs {
 		background-image: url("../img/sectionAboutUs.jpg");
@@ -1280,8 +1314,7 @@ a{
 		}
 	}
 
-	//stock-list
-
+	//STOCK_LIST
 	.imgStocklist {
 		background-position: center -82px !important;
 	}
@@ -1329,53 +1362,90 @@ a{
 	}
 
 	#findCars-StockList {
-		@extend #findCars;
-
-
-		.pagination {
-			margin: 0;
-			width: 100%;
-
-			@include media-breakpoint-down(md) {
-				justify-content: center;
-				margin-top: 20px;
-			}
-
-			.prev,
-			.next {
+		@extend .filterResultNumbers;
+		.filterResults {
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style: none;
 				display: flex;
-				height: 50px;
-				align-items: center;
-				background-color: black !important;
-				color: white;
-				border: none;
-				border-radius: 0;
-				padding: 20px;
-				text-decoration: none;
-				margin-right: 5px;
-
-				@include media-breakpoint-down(md) {
-					clip-path: none;
-					padding: 10px
+				flex-wrap: wrap;
+				justify-content: center;
+	
+				li {
+					margin-bottom: 30px;
+					margin-right: 20px;
+					width: 23%;
+	
+					@include media-breakpoint-down(md) {
+						width: 30%;
+					}
+	
+					@include media-breakpoint-down(sm) {
+						width: 100%;
+						margin-right: 0;
+					}
+	
+					a {
+						text-decoration: none;
+					}
+	
+					.card {
+	
+						border-radius: 0;
+						height: 100%;
+						border: none;
+						display: flex;
+						justify-content: center;
+						align-items: center !important;
+	
+						.card-body {
+							padding-top: 3px;
+							padding-left: 0px;
+							padding-right: 3px;
+						}
+	
+						img {
+							width: 90%;
+							height: 194px !important;
+							border-radius: 0;
+							object-fit: cover;
+							display: flex;
+							justify-content: center;
+	
+							@include media-breakpoint-down(lg) {
+								width: 100%;
+							}
+						}
+	
+						ul {
+							flex-direction: column;
+	
+							li {
+								width: 100%;
+								margin: 0;
+								color: black;
+								font-weight: bold;
+								font-size: 14px;
+	
+								span {
+									text-transform: uppercase;
+									color: #82c625;
+									font-weight: 400;
+								}
+							}
+						}
+					}
 				}
 			}
-
-			.page-item {
-				.page-link {
-					background-color: #82c625;
-					height: 50px;
-					display: flex;
-					justify-content: center;
-					// clip-path: polygon(17% 0, 100% 0%, 83% 100%, 0 100%);
-					align-items: center;
-					padding: 15px;
-					border: none;
-					color: white;
-					margin-right: 5px;
-				}
+	
+			.moreCars {
+				width: 200px;
+				height: 50px;
+				text-transform: capitalize;
+				font-weight: 500;
 			}
 		}
-
 	}
 
 	.logoCars {
@@ -1405,7 +1475,7 @@ a{
 	}
 
 
-	//bank info
+	//BANK INFO
 	.dataBankInfo {
 		margin-top: 57px;
 
@@ -1532,7 +1602,7 @@ a{
 		}
 	}
 
-	//registration
+	//REGISTRATION
 	.create-form {
 		.form-group {
 			label {
@@ -1588,7 +1658,7 @@ a{
 
 	}
 
-	//contact form
+	//CONTACT FORM
 	.info {
 		a {
 			color: $primary;
@@ -1597,6 +1667,268 @@ a{
 		}
 	}
 
+
+	//WHY CHOOSE US
+	.whyImgWelcome {
+		background-position: center;
+	}
+
+	.whyInfo {
+		h3 {
+			text-transform: uppercase;
+			font-weight: bold;
+			color: black;
+			font-size: 20px;
+			margin-bottom: 15px;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 18px;
+				text-align: center;
+			}
+		}
+
+		p {
+			font-size: 18px;
+
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				font-size: 14px;
+			}
+		}
+
+		.img-fluid {
+			@include media-breakpoint-down(sm) {
+				width: 90% !important;
+			}
+		}
+	}
+
+	//HOW TO BUY
+	.howBuyWelcome {
+		span {
+			color: $primary;
+		}
+	}
+
+	.buySteps {
+		h3 {
+			position: relative;
+			padding: 10px;
+			font-size: 20px;
+			font-weight: bold;
+			color: white;
+
+			&::before {
+				position: absolute;
+				content: "";
+				background-color: $primary;
+				height: 100%;
+				width: 30%;
+				z-index: -1;
+				left: -220px;
+				top: 0;
+				transform: skew(-27deg);
+
+				@include media-breakpoint-down(lg) {
+					width: 100%;
+					left: -805px;
+				}
+
+				@include media-breakpoint-down(md) {
+					left: -565px;
+				}
+
+				@include media-breakpoint-down(sm) {
+					left: -100px;
+				}
+			}
+		}
+	}
+
+	//FAQS
+	.faqs {
+		h3 {
+			font-size: 23px;
+			font-weight: bold;
+			color: $primary;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 18px;
+				text-align: center;
+			}
+		}
+
+		a {
+			color: $primary;
+
+			&:hover {
+				color: #a96733;
+				font-weight: bold;
+			}
+		}
+
+		p {
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+				font-size: 14px;
+			}
+		}
+	}
+
+	//CAR DETAILS
+	.fastNavDetail{
+		.breadcrumb{
+			background-color: transparent;
+			padding-left: 0;
+		}
+		a{
+			padding: 0.75rem;
+			padding-left: 0;
+			padding-right: 0;
+			color: $primary;
+			font-weight: bold;
+		}
+	}
+	.dataCar{
+		.specifCar{
+			column-count: 2;
+			padding: 0;
+			margin: 0;
+			list-style: none;
+			li{
+				margin-bottom: 10px;
+				font-size: 16px;
+				color: black;
+				font-weight: bold;
+				span{
+					color:$primary;
+					font-weight: 400;
+					button{
+						background:red;
+						color: white;
+						font-weight: bold;
+						border: none;
+						padding: 5px 25px;
+						border-radius: 10px;
+						font-size: 16px;
+						text-transform: uppercase;
+						cursor: pointer;
+						&:hover{
+							background-color: #ebc52b;
+							color: black;
+						}
+					}
+				}
+			}
+			@include media-breakpoint-down(sm){
+				column-count: 1;
+			}
+		}
+	}
+	.security{
+		p{
+			margin-bottom: 0;
+		}
+		form{
+			label{
+				color: black;
+				font-size: 14px;
+				font-weight: 300;
+			}
+			.form-group{
+				margin-bottom: 0;
+			}
+			input[type=text],
+			textarea,
+			input[type=password] {
+				border-radius: 0;
+				background-color: transparent !important;
+				border: 1px solid #82c625;
+
+				&:focus {
+					font-size: 15px;
+					color: #535d5b;
+					font-weight: bold;
+					border: 1px solid #82c625;
+				}
+
+				&::placeholder {
+					color: #535d5b !important;
+				}
+			}
+			button{
+				padding: 10px 25px;
+				border-radius: 50px;
+				color:black;
+				font-weight: bold;
+				background-color: #ebc52b;
+				width: auto;
+				height: auto;
+				font-size: 13px;
+				border: none;
+				text-transform: none;
+				&:hover{
+					background-color: $primary;
+					color: white;
+				}
+			}
+		}
+	}
+	.additionalOptions{
+		h2{
+			background-color: #535d5b;
+			padding: 10px;
+			width: 100%;
+			color: white;
+			font-size: 16px;
+		}
+		ul{
+			list-style: none;
+			li{
+				margin-right: 5px;
+			}
+		}
+		span{
+			border-radius: 5px;
+			padding: 5px;
+			.fas{
+				font-size: 14px;
+				color: white;
+			}
+			.fab{
+				font-size: 14px;
+				color: white;
+			}
+		}
+		.twitter{
+			background-color: rgb(85, 172, 238);
+		}
+		.fb{
+			background-color: rgb(59, 89, 152);
+			padding: 5px 10px;
+		}
+		.pint{
+			background-color: rgb(189, 8, 28);
+			padding: 5px 8px;
+		}
+		.google{
+			background-color: rgb(202, 224, 255);
+		}
+		.gmail,.more{
+			background-color: rgb(1, 102, 255);
+		}
+		.gmail{
+			padding: 5px 7px;
+		}
+		.more{
+			padding: 5px 8px;
+		}
+		.flex-column-sm{
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+		}
+	}
 }
 
 footer#footer {
