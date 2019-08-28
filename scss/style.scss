@@ -69,7 +69,7 @@ a {
 }
 
 .btn {
-	// background-color: rgb(80, 139, 176);
+
 	background-color: $primary;
 	display: flex;
 	justify-content: center;
@@ -80,11 +80,6 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: 0;
-
-
-	width: 200px;
-	height: 50px;
-
 }
 
 .fixed {
@@ -277,7 +272,7 @@ a {
 		display: flex;
 		align-items: center;
 
-		img {
+		.logo-md {
 			width: 270px;
 			height: 50px;
 
@@ -285,7 +280,13 @@ a {
 				display: none;
 			}
 		}
-
+		.logo-sm{
+			margin-left: 15px;
+			width: 90px;
+			@include media-breakpoint-up(md){
+				display: none;
+			}
+		}
 		button {
 			border: none;
 			border-radius: none;
@@ -336,10 +337,10 @@ a {
 			flex-direction: column;
 			position: fixed;
 			right: 0;
-			width: 100%;
+			width: 80%;
 			height: calc(100% - 50px);
 			max-width: 300px;
-			background-color: #fff;
+			background-color: black;
 			right: 0;
 			top: 70px;
 			overflow: auto;
@@ -353,7 +354,7 @@ a {
 			}
 
 			@include media-breakpoint-down(sm) {
-				max-width: 100%;
+				width: 100%;
 			}
 		}
 
@@ -368,7 +369,7 @@ a {
 			margin: 0;
 			list-style: none;
 			height: 50px;
-
+			position: relative;
 			@include media-breakpoint-up(lg) {
 				display: flex;
 				align-items: center;
@@ -389,13 +390,16 @@ a {
 
 					@include media-breakpoint-down(lg) {
 						font-size: 11px;
+
 					}
 
 					@include media-breakpoint-down(md) {
 						padding: 8px;
 						display: block;
 						line-height: 1;
+						color: white;
 					}
+
 				}
 
 				.login {
@@ -441,6 +445,46 @@ a {
 				@include media-breakpoint-down(lg) {
 					padding: 10px;
 				}
+				&:hover>.sub-nav {
+					display: block;
+					transition-duration: 0.2s;
+				}
+				&.active>.sub-nav {
+					display: block;
+					transition-duration: 0.2s;
+				}
+				.sub-nav{
+					display: none;
+					position: absolute;
+					max-width: 300px;
+					height: 100%;
+					padding: 0px 5px;
+					background-color: $primary;
+					width: 256px;
+					min-height: 480px;
+					top: 50px;
+					left: 0;
+					@include media-breakpoint-down(lg){
+						top: 47px;
+					}
+					@include media-breakpoint-down(md){
+						position: static;
+						width: 100%;
+					}
+					ul {
+						padding: 0;
+						margin: 0;
+						list-style: none;
+						li{
+							padding: 20px;
+							border-bottom: 1px solid black;
+							color: white;
+							&:hover{
+								background: #000000;
+							}
+						}
+					}
+				}
 			}
 
 			&::after {
@@ -449,11 +493,12 @@ a {
 				z-index: 1;
 				width: 33%;
 				background-color: #82c625;
-				height: 50px;
-				right: 0;
-
+				height: 100%;
+				// right: 0;
+				right: -160px;
 				@include media-breakpoint-down(lg) {
-					width: 32.333%;
+					width:43%;
+					right: -125px;
 				}
 
 				@include media-breakpoint-down(md) {
@@ -487,7 +532,6 @@ a {
 				background-size: cover;
 				background-position: center;
 				position: relative;
-
 				@include media-breakpoint-up(lg) {
 					height: 525px;
 					width: 100%;
@@ -495,16 +539,16 @@ a {
 					justify-content: flex-start;
 					background-size: cover;
 				}
-
 				@include media-breakpoint-down(md) {
 					height: 400px;
 				}
-
 				@include media-breakpoint-down(sm) {
 					height: 193px;
+					background-size: 100% 100%;
+    				background-position: center;
 				}
 
-				.caption {
+				/*.caption {
 					position: relative;
 					z-index: 10;
 					display: flex;
@@ -588,7 +632,7 @@ a {
 						}
 					}
 
-				}
+				}*/
 			}
 		}
 
@@ -776,15 +820,35 @@ a {
 	.filterResultNumbers {
 		margin-top: 30px;
 		margin-bottom: 30px;
-
+		.row{
+			@include media-breakpoint-down(md){
+				justify-content: center;
+				.pagination{
+					margin-top: 10px;
+				}
+			}
+		}
 		.numberAvaliableCars {
-			height: 50px;
-			background-color: $primary;
-			display: flex;
-			align-items: center;
-			padding-left: 40px;
-			clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
-
+			position: relative;
+			padding: 10px 40px;
+			@include media-breakpoint-down(sm){
+				padding: 10px 0px;
+			}
+			&::before{
+				position:absolute;
+				content: "";
+				background-color: $primary;
+				transform: skew(-27deg);
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				z-index: -1;
+				@include media-breakpoint-down(sm){
+					width: 93%;
+					left: 11px;
+				}
+			}
 			p {
 				margin: 0;
 				font-size: 16px;
@@ -793,7 +857,8 @@ a {
 				text-transform: uppercase;
 
 				@include media-breakpoint-down(sm) {
-					font-size: 14px;
+					font-size: 12px;
+					display: inline;
 				}
 			}
 
@@ -805,44 +870,80 @@ a {
 		.pagination {
 			margin: 0;
 			width: 100%;
-
-			@include media-breakpoint-down(md) {
-				justify-content: center;
-				margin-top: 20px;
-			}
-
-			.prev,
-			.next {
-				display: flex;
-				height: 50px;
-				align-items: center;
-				background-color: black !important;
-				color: white;
-				border: none;
-				padding: 20px;
-				border-radius: 0;
-				text-decoration: none;
+			li{
+				padding: 10px 15px;
+				position: relative;
 				margin-right: 5px;
-
-				@include media-breakpoint-down(md) {
-					clip-path: none;
-					padding: 10px
-				}
-			}
-
-			.page-item {
-				.page-link {
+			
+				&::before{
+					position: absolute;
+					content:"";
+					height: 100%;
+					width: 100%;
+					transform: skew(-27deg);
 					background-color: #82c625;
-					height: 50px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					padding: 15px;
-					border: none;
+					border-left: red;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
+				a{
 					color: white;
-					margin-right: 5px;
 				}
 			}
+			.prev,.next{
+				&::before{
+					position: absolute;
+					content:"";
+					height: 100%;
+					width: 100%;
+					transform: skew(-27deg);
+					background-color: #000000;
+					border-left: red;
+					top: 0;
+					left: 0;
+					z-index: -1;
+				}
+			}
+			// @include media-breakpoint-down(md) {
+			// 	justify-content: center;
+			// 	margin-top: 20px;
+			// }
+
+			// .prev,
+			// .next {
+			// 	// display: flex;
+			// 	// height: 50px;
+			// 	// align-items: center;
+			// 	background-color: black !important;
+			// 	color: white;
+			// 	border: none;
+			// 	// padding: 20px;
+			// 	// border-radius: 0;
+			// 	// text-decoration: none;
+			// 	// margin-right: 5px;
+			// 	// transform: skew(-27deg);
+			// 	@include media-breakpoint-down(md) {
+			// 		clip-path: none;
+			// 		padding: 10px
+			// 	}
+			// }
+
+			// .page-item {
+			// 	color: white;
+			// 	.page-link {
+			// 		background-color: #82c625;
+			// 		// height: 50px;
+			// 		// display: flex;
+			// 		// justify-content: center;
+			// 		// align-items: center;
+			// 		// padding: 15px;
+			// 		// border: none;
+			// 		// color: white;
+			// 		// margin-right: 5px;
+			// 		// transform: skew(-27deg);
+			// 	}
+			// }
 		}
 	}
 
@@ -868,26 +969,20 @@ a {
 					width: 100%;
 					margin-right: 0;
 				}
-
-				a {
-					text-decoration: none;
-				}
-
 				.card {
-
 					border-radius: 0;
 					height: 100%;
 					border: none;
 					display: flex;
 					justify-content: center;
 					align-items: center !important;
-
 					.card-body {
-						padding-top: 3px;
-						padding-left: 0px;
-						padding-right: 3px;
+						padding: 3px 0;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						width: 90%;
 					}
-
 					img {
 						width: 90%;
 						height: 194px !important;
@@ -902,8 +997,8 @@ a {
 					}
 
 					ul {
+						display: flex;
 						flex-direction: column;
-
 						li {
 							width: 100%;
 							margin: 0;
@@ -918,15 +1013,49 @@ a {
 							}
 						}
 					}
+					
 				}
 			}
 		}
 
 		.moreCars {
-			width: 200px;
-			height: 50px;
+			position: relative;
+			padding: 5px 20px;
 			text-transform: capitalize;
 			font-weight: 500;
+			z-index: 3;
+			margin: 0 auto;
+			width: 80%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			background-color: transparent;
+			&::before{
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $primary;
+				top: 0;
+				left: 0px;
+				z-index: -1;
+				transform: skew(-27deg);
+
+			}
+			&:hover{
+				color: black;
+				&::before{
+					background-color: #ebc52b;
+				}
+			}
+		}
+		.show-moreBtn{
+			padding: 10px 20px;
+			&:hover{
+				color: black;
+				background-color: #ebc52b;
+			}
 		}
 	}
 
@@ -1013,8 +1142,6 @@ a {
 	}
 
 	#chooseUs {
-
-		//height: 50vh;
 		h3 {
 			text-align: center;
 			text-transform: uppercase;
@@ -1024,7 +1151,6 @@ a {
 			padding-top: 50px;
 			margin: 0;
 		}
-
 		.row {
 			padding-top: 30px;
 			height: 40vh;
@@ -1093,6 +1219,13 @@ a {
 						text-align: center;
 					}
 				}
+			}
+		}
+		.show-moreBtn{
+			padding: 10px 20px;
+			&:hover{
+				color: black;
+				background-color: #ebc52b;
 			}
 		}
 	}
@@ -1440,10 +1573,36 @@ a {
 			}
 	
 			.moreCars {
-				width: 200px;
-				height: 50px;
+				position: relative;
+				padding: 5px 20px;
 				text-transform: capitalize;
 				font-weight: 500;
+				z-index: 3;
+				margin: 0 auto;
+				width: 80%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: white;
+				background-color: transparent;
+				&::before{
+					position: absolute;
+					content: "";
+					width: 100%;
+					height: 100%;
+					background-color: $primary;
+					top: 0;
+					left: 0px;
+					z-index: -1;
+					transform: skew(-27deg);
+	
+				}
+				&:hover{
+					color: black;
+					&::before{
+						background-color: #ebc52b;
+					}
+				}
 			}
 		}
 	}
@@ -1487,7 +1646,7 @@ a {
 			color: white;
 			display: inline;
 			font-size: 20px;
-
+			padding: 15px;
 			@include media-breakpoint-down(sm) {
 				font-size: 18px;
 			}
@@ -1495,19 +1654,16 @@ a {
 			&::after {
 				position: absolute;
 				content: "";
-				width: 980px;
-				height: 68px;
+				width: 950px;
+				height: 100%;
 				left: -450px;
 				background-color: #82c625;
 				z-index: -1;
-				top: -21px;
-				clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
-
+				top: 0px;
+				transform: skew(35deg);
 				@include media-breakpoint-down(sm) {
 					width: 755px;
-					height: 68px;
 					left: -450px;
-					top: -26px;
 				}
 			}
 		}
@@ -1993,6 +2149,20 @@ a {
 		}
 		.equiImg{
 			margin-top: 20px;
+		}
+		//paking
+		.paking{
+			p{
+				margin: 0;
+			}
+			h3{
+				font-size: 20px;
+			}
+		}
+		.pakingImgGallery{
+			img{
+				margin-top: 30px;
+			}
 		}
 }
 

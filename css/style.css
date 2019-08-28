@@ -10650,8 +10650,6 @@ a {
   text-decoration: none;
   cursor: pointer;
   border-radius: 0;
-  width: 200px;
-  height: 50px;
 }
 
 .fixed {
@@ -10890,13 +10888,24 @@ a {
           align-items: center;
 }
 
-#header .menu-md img {
+#header .menu-md .logo-md {
   width: 270px;
   height: 50px;
 }
 
 @media (max-width: 767.98px) {
-  #header .menu-md img {
+  #header .menu-md .logo-md {
+    display: none;
+  }
+}
+
+#header .menu-md .logo-sm {
+  margin-left: 15px;
+  width: 90px;
+}
+
+@media (min-width: 768px) {
+  #header .menu-md .logo-sm {
     display: none;
   }
 }
@@ -10977,10 +10986,10 @@ a {
             flex-direction: column;
     position: fixed;
     right: 0;
-    width: 100%;
+    width: 80%;
     height: calc(100% - 50px);
     max-width: 300px;
-    background-color: #fff;
+    background-color: black;
     right: 0;
     top: 70px;
     overflow: auto;
@@ -11001,7 +11010,7 @@ a {
 
 @media (max-width: 991.98px) and (max-width: 767.98px) {
   #header .main-nav {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -11022,6 +11031,7 @@ a {
   margin: 0;
   list-style: none;
   height: 50px;
+  position: relative;
 }
 
 @media (min-width: 992px) {
@@ -11061,6 +11071,7 @@ a {
     padding: 8px;
     display: block;
     line-height: 1;
+    color: white;
   }
 }
 
@@ -11112,19 +11123,74 @@ a {
   }
 }
 
+#header .main-nav .main-menu > li:hover > .sub-nav {
+  display: block;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+#header .main-nav .main-menu > li.active > .sub-nav {
+  display: block;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+
+#header .main-nav .main-menu > li .sub-nav {
+  display: none;
+  position: absolute;
+  max-width: 300px;
+  height: 100%;
+  padding: 0px 5px;
+  background-color: #82c625;
+  width: 256px;
+  min-height: 480px;
+  top: 50px;
+  left: 0;
+}
+
+@media (max-width: 1199.98px) {
+  #header .main-nav .main-menu > li .sub-nav {
+    top: 47px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #header .main-nav .main-menu > li .sub-nav {
+    position: static;
+    width: 100%;
+  }
+}
+
+#header .main-nav .main-menu > li .sub-nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#header .main-nav .main-menu > li .sub-nav ul li {
+  padding: 20px;
+  border-bottom: 1px solid black;
+  color: white;
+}
+
+#header .main-nav .main-menu > li .sub-nav ul li:hover {
+  background: #000000;
+}
+
 #header .main-nav .main-menu::after {
   position: absolute;
   content: "";
   z-index: 1;
   width: 33%;
   background-color: #82c625;
-  height: 50px;
-  right: 0;
+  height: 100%;
+  right: -160px;
 }
 
 @media (max-width: 1199.98px) {
   #header .main-nav .main-menu::after {
-    width: 32.333%;
+    width: 43%;
+    right: -125px;
   }
 }
 
@@ -11161,6 +11227,91 @@ a {
   background-size: cover;
   background-position: center;
   position: relative;
+  /*.caption {
+					position: relative;
+					z-index: 10;
+					display: flex;
+					height: 100%;
+					justify-content: center;
+					align-items: flex-end;
+					transition: opacity 0.3s ease-in-out;
+					padding-bottom: 40px;
+					background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+					@include media-breakpoint-down(sm) {
+						padding-bottom: 23px;
+					}
+
+					.title {
+						text-shadow: 0 2px 34px rgba(0, 0, 0, 0.5);
+						color: #ffffff;
+						font-size: 50px;
+						line-height: 80px;
+						margin: 0;
+						display: flex;
+						align-items: flex-end;
+						font-weight: 500;
+
+						@include media-breakpoint-down(md) {
+							font-size: 40px;
+							line-height: 40px;
+						}
+
+						@include media-breakpoint-down(sm) {
+							font-size: 22px;
+							line-height: 35px;
+						}
+
+					}
+
+					a {
+						text-decoration: none;
+						color: #ffffff;
+						font-size: 22px;
+						width: 154px;
+						height: 44px;
+						border-radius: 22px;
+						border: 3px solid #ffffff;
+						background-color: rgba(255, 255, 255, 0.2);
+						display: flex;
+						justify-content: space-evenly;
+						align-items: center;
+						margin-bottom: 10px;
+						position: relative;
+
+						img {
+							width: 21px;
+							height: 16px;
+
+							@include media-breakpoint-down(sm) {
+								width: 15px;
+								height: 12px;
+							}
+						}
+
+						@include media-breakpoint-down(sm) {
+							font-size: 13px;
+							width: 95px;
+							height: 28px;
+							border: 1px solid #ffffff;
+						}
+
+						&::after {
+							content: "";
+							border: 1px solid #ffffff;
+							opacity: 0.3;
+							width: 450px;
+							position: absolute;
+							bottom: 15px;
+							right: -473px;
+
+							@include media-breakpoint-down(md) {
+								display: none;
+							}
+						}
+					}
+
+				}*/
 }
 
 @media (min-width: 992px) {
@@ -11184,120 +11335,8 @@ a {
 @media (max-width: 767.98px) {
   #content .slide-content .homeslide .slide {
     height: 193px;
-  }
-}
-
-#content .slide-content .homeslide .slide .caption {
-  position: relative;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  padding-bottom: 40px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000000));
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-}
-
-@media (max-width: 767.98px) {
-  #content .slide-content .homeslide .slide .caption {
-    padding-bottom: 23px;
-  }
-}
-
-#content .slide-content .homeslide .slide .caption .title {
-  text-shadow: 0 2px 34px rgba(0, 0, 0, 0.5);
-  color: #ffffff;
-  font-size: 50px;
-  line-height: 80px;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  font-weight: 500;
-}
-
-@media (max-width: 991.98px) {
-  #content .slide-content .homeslide .slide .caption .title {
-    font-size: 40px;
-    line-height: 40px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #content .slide-content .homeslide .slide .caption .title {
-    font-size: 22px;
-    line-height: 35px;
-  }
-}
-
-#content .slide-content .homeslide .slide .caption a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 22px;
-  width: 154px;
-  height: 44px;
-  border-radius: 22px;
-  border: 3px solid #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-#content .slide-content .homeslide .slide .caption a img {
-  width: 21px;
-  height: 16px;
-}
-
-@media (max-width: 767.98px) {
-  #content .slide-content .homeslide .slide .caption a img {
-    width: 15px;
-    height: 12px;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #content .slide-content .homeslide .slide .caption a {
-    font-size: 13px;
-    width: 95px;
-    height: 28px;
-    border: 1px solid #ffffff;
-  }
-}
-
-#content .slide-content .homeslide .slide .caption a::after {
-  content: "";
-  border: 1px solid #ffffff;
-  opacity: 0.3;
-  width: 450px;
-  position: absolute;
-  bottom: 15px;
-  right: -473px;
-}
-
-@media (max-width: 991.98px) {
-  #content .slide-content .homeslide .slide .caption a::after {
-    display: none;
+    background-size: 100% 100%;
+    background-position: center;
   }
 }
 
@@ -11515,18 +11554,46 @@ a {
   margin-bottom: 30px;
 }
 
+@media (max-width: 991.98px) {
+  #content .filterResultNumbers .row, #content #findCars-StockList .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #content .filterResultNumbers .row .pagination, #content #findCars-StockList .row .pagination {
+    margin-top: 10px;
+  }
+}
+
 #content .filterResultNumbers .numberAvaliableCars, #content #findCars-StockList .numberAvaliableCars {
-  height: 50px;
+  position: relative;
+  padding: 10px 40px;
+}
+
+@media (max-width: 767.98px) {
+  #content .filterResultNumbers .numberAvaliableCars, #content #findCars-StockList .numberAvaliableCars {
+    padding: 10px 0px;
+  }
+}
+
+#content .filterResultNumbers .numberAvaliableCars::before, #content #findCars-StockList .numberAvaliableCars::before {
+  position: absolute;
+  content: "";
   background-color: #82c625;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 40px;
-  -webkit-clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
-          clip-path: polygon(3% 0, 100% 0, 97% 100%, 0% 100%);
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 767.98px) {
+  #content .filterResultNumbers .numberAvaliableCars::before, #content #findCars-StockList .numberAvaliableCars::before {
+    width: 93%;
+    left: 11px;
+  }
 }
 
 #content .filterResultNumbers .numberAvaliableCars p, #content #findCars-StockList .numberAvaliableCars p {
@@ -11539,7 +11606,8 @@ a {
 
 @media (max-width: 767.98px) {
   #content .filterResultNumbers .numberAvaliableCars p, #content #findCars-StockList .numberAvaliableCars p {
-    font-size: 14px;
+    font-size: 12px;
+    display: inline;
   }
 }
 
@@ -11554,60 +11622,42 @@ a {
   width: 100%;
 }
 
-@media (max-width: 991.98px) {
-  #content .filterResultNumbers .pagination, #content #findCars-StockList .pagination {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 20px;
-  }
-}
-
-#content .filterResultNumbers .pagination .prev, #content #findCars-StockList .pagination .prev,
-#content .filterResultNumbers .pagination .next,
-#content #findCars-StockList .pagination .next {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: black !important;
-  color: white;
-  border: none;
-  padding: 20px;
-  border-radius: 0;
-  text-decoration: none;
+#content .filterResultNumbers .pagination li, #content #findCars-StockList .pagination li {
+  padding: 10px 15px;
+  position: relative;
   margin-right: 5px;
 }
 
-@media (max-width: 991.98px) {
-  #content .filterResultNumbers .pagination .prev, #content #findCars-StockList .pagination .prev,
-  #content .filterResultNumbers .pagination .next,
-  #content #findCars-StockList .pagination .next {
-    -webkit-clip-path: none;
-            clip-path: none;
-    padding: 10px;
-  }
-}
-
-#content .filterResultNumbers .pagination .page-item .page-link, #content #findCars-StockList .pagination .page-item .page-link {
+#content .filterResultNumbers .pagination li::before, #content #findCars-StockList .pagination li::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
   background-color: #82c625;
-  height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-  border: none;
+  border-left: red;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#content .filterResultNumbers .pagination li a, #content #findCars-StockList .pagination li a {
   color: white;
-  margin-right: 5px;
+}
+
+#content .filterResultNumbers .pagination .prev::before, #content #findCars-StockList .pagination .prev::before, #content .filterResultNumbers .pagination .next::before, #content #findCars-StockList .pagination .next::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+  background-color: #000000;
+  border-left: red;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #content .filterResults ul {
@@ -11643,10 +11693,6 @@ a {
   }
 }
 
-#content .filterResults ul li a {
-  text-decoration: none;
-}
-
 #content .filterResults ul li .card {
   border-radius: 0;
   height: 100%;
@@ -11663,9 +11709,18 @@ a {
 }
 
 #content .filterResults ul li .card .card-body {
-  padding-top: 3px;
-  padding-left: 0px;
-  padding-right: 3px;
+  padding: 3px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
 }
 
 #content .filterResults ul li .card img {
@@ -11689,6 +11744,9 @@ a {
 }
 
 #content .filterResults ul li .card ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -11710,10 +11768,54 @@ a {
 }
 
 #content .filterResults .moreCars {
-  width: 200px;
-  height: 50px;
+  position: relative;
+  padding: 5px 20px;
   text-transform: capitalize;
   font-weight: 500;
+  z-index: 3;
+  margin: 0 auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: transparent;
+}
+
+#content .filterResults .moreCars::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #82c625;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+}
+
+#content .filterResults .moreCars:hover {
+  color: black;
+}
+
+#content .filterResults .moreCars:hover::before {
+  background-color: #ebc52b;
+}
+
+#content .filterResults .show-moreBtn {
+  padding: 10px 20px;
+}
+
+#content .filterResults .show-moreBtn:hover {
+  color: black;
+  background-color: #ebc52b;
 }
 
 #content #informationAboutUs {
@@ -11930,6 +12032,15 @@ a {
   #content #chooseUs .chooseCard .choose-text p {
     text-align: center;
   }
+}
+
+#content #chooseUs .show-moreBtn {
+  padding: 10px 20px;
+}
+
+#content #chooseUs .show-moreBtn:hover {
+  color: black;
+  background-color: #ebc52b;
 }
 
 #content .welcome-page-introduction {
@@ -12350,10 +12461,45 @@ a {
 }
 
 #content #findCars-StockList .filterResults .moreCars {
-  width: 200px;
-  height: 50px;
+  position: relative;
+  padding: 5px 20px;
   text-transform: capitalize;
   font-weight: 500;
+  z-index: 3;
+  margin: 0 auto;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: transparent;
+}
+
+#content #findCars-StockList .filterResults .moreCars::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #82c625;
+  top: 0;
+  left: 0px;
+  z-index: -1;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+}
+
+#content #findCars-StockList .filterResults .moreCars:hover {
+  color: black;
+}
+
+#content #findCars-StockList .filterResults .moreCars:hover::before {
+  background-color: #ebc52b;
 }
 
 #content .logoCars {
@@ -12398,6 +12544,7 @@ a {
   color: white;
   display: inline;
   font-size: 20px;
+  padding: 15px;
 }
 
 @media (max-width: 767.98px) {
@@ -12409,22 +12556,20 @@ a {
 #content .dataBankInfo h3::after {
   position: absolute;
   content: "";
-  width: 980px;
-  height: 68px;
+  width: 950px;
+  height: 100%;
   left: -450px;
   background-color: #82c625;
   z-index: -1;
-  top: -21px;
-  -webkit-clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
+  top: 0px;
+  -webkit-transform: skew(35deg);
+          transform: skew(35deg);
 }
 
 @media (max-width: 767.98px) {
   #content .dataBankInfo h3::after {
     width: 755px;
-    height: 68px;
     left: -450px;
-    top: -26px;
   }
 }
 
@@ -12980,6 +13125,18 @@ a {
 
 #content .equiImg {
   margin-top: 20px;
+}
+
+#content .paking p {
+  margin: 0;
+}
+
+#content .paking h3 {
+  font-size: 20px;
+}
+
+#content .pakingImgGallery img {
+  margin-top: 30px;
 }
 
 footer#footer {
