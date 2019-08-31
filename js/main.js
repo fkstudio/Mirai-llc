@@ -12,7 +12,8 @@ $(window).on('scroll', function () {
 var $carousel = $('.homeslide').flickity({
     prevNextButtons: false,
     pageDots: false,
-    cellAlign: 'left'
+    cellAlign: 'left',
+    autoPlay: true
 });
 // Flickity instance
 var flkty = $carousel.data('flickity');

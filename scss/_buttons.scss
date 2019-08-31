@@ -22,11 +22,7 @@
     text-decoration: none;
   }
 
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: $btn-focus-box-shadow;
-  }
+
 
   // Disabled comes first so active can properly restyle
   &.disabled,
@@ -39,9 +35,7 @@
   &:not(:disabled):not(.disabled).active {
     @include box-shadow($btn-active-box-shadow);
 
-    &:focus {
-      @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
-    }
+    
   }
 }
 
@@ -84,11 +78,6 @@ fieldset:disabled a.btn {
     text-decoration: $link-hover-decoration;
   }
 
-  &:focus,
-  &.focus {
-    text-decoration: $link-hover-decoration;
-    box-shadow: none;
-  }
 
   &:disabled,
   &.disabled {

@@ -66,8 +66,11 @@ $primary: #82c625;
 a {
 	text-decoration: none !important;
 	cursor: pointer;
+	&:focus{
+		box-shadow: transparent !important;
+		outline: none !important;
+	}
 }
-
 .btn {
 
 	background-color: $primary;
@@ -80,6 +83,7 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: 0;
+
 }
 
 .fixed {
@@ -529,7 +533,7 @@ a {
 			.slide {
 				width: 100%;
 				background-repeat: no-repeat;
-				background-size: cover;
+				background-size: 100% 100%;
 				background-position: center;
 				position: relative;
 				@include media-breakpoint-up(lg) {
@@ -537,14 +541,12 @@ a {
 					width: 100%;
 					position: relative;
 					justify-content: flex-start;
-					background-size: cover;
 				}
 				@include media-breakpoint-down(md) {
 					height: 400px;
 				}
 				@include media-breakpoint-down(sm) {
 					height: 193px;
-					background-size: 100% 100%;
     				background-position: center;
 				}
 
@@ -659,11 +661,7 @@ a {
 			}
 		}
 	}
-
-	//filtro
-	// #findCars {
-
-	//introduction
+ 
 	.filterContainer {
 		background-color: black;
 		flex-direction: column;
@@ -1059,8 +1057,6 @@ a {
 		}
 	}
 
-	// }
-
 	#informationAboutUs {
 		background-image: url("../img/sectionAboutUs.jpg");
 		background-size: cover;
@@ -1282,7 +1278,9 @@ a {
 					text-align: center;
 				}
 			}
-
+			span {
+				color: $primary;
+			}
 			#filterTitle {
 				display: flex;
 				align-items: center;
@@ -1292,8 +1290,6 @@ a {
 				background-color: #000000;
 				position: relative;
 
-				// clip-path: polygon(11% 0, 100% 0%, 90% 100%, 0 100%);
-				// border-right: 5px solid $primary;
 				@include media-breakpoint-down(md) {
 					margin-top: 30px;
 				}
@@ -1809,6 +1805,9 @@ a {
 				cursor: pointer;
 				font-weight: bold;
 			}
+			@include media-breakpoint-down(sm) {
+				text-align:left;
+			}
 
 		}
 
@@ -1822,7 +1821,9 @@ a {
 			cursor: pointer;
 		}
 	}
-
+	.loginImg{
+		margin-top: 100px;
+	}
 
 	//WHY CHOOSE US
 	.whyImgWelcome {
@@ -1856,13 +1857,6 @@ a {
 			@include media-breakpoint-down(sm) {
 				width: 90% !important;
 			}
-		}
-	}
-
-	//HOW TO BUY
-	.howBuyWelcome {
-		span {
-			color: $primary;
 		}
 	}
 
@@ -2089,9 +2083,6 @@ a {
 	// BUSSINESS INFO VIEWS
 
 		//auction
-		.auctionWelcome{
-			margin-top:0;
-		}
 		.auction{
 			.img-one{	
 				img{
@@ -2102,7 +2093,7 @@ a {
 				}
 			}
 			.map{
-				margin-top: 120px;
+				margin-top: 90px;
 				@include media-breakpoint-down(sm){
 					margin-top: 60px;
 				}
@@ -2116,8 +2107,17 @@ a {
 		.sunImg{
 			margin-top: 20px;
 			img{
-				width: 100%;
+				// width: 100%;
+				// height: 100%; 
+				width: 450px;
 				height: 100%;
+				@include media-breakpoint-down(md){
+					width: 300px;
+				}
+			}
+			@include media-breakpoint-down(sm){
+				display: flex;
+				justify-content: center;
 			}
 		}
 		//mark
@@ -2129,9 +2129,14 @@ a {
 		}
 		.markImg,.equiImg{
 			img{
-				width: 100%;
-				height: 100%;
+				// width: 100%;
+				// height: 100%;
+				width: 200px;
+				height: 200px;
 			}
+		}
+		.markImg{
+			margin-top: 10px;
 		}
 		//understand sheet
 		.sheetImg{
@@ -2145,6 +2150,12 @@ a {
 			}
 			@include media-breakpoint-down(sm){
 				margin-top: 60px;
+			}
+		}
+		.equiImg{
+			display: flex;
+			@include media-breakpoint-down(sm){
+				justify-content: center;
 			}
 		}
 		.equiImg{
@@ -2448,6 +2459,97 @@ footer#footer {
 
 		.hover-shadow:hover {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+	}
+	.footer-thrid-row{
+		h3 {
+			color: $primary !important;
+			font-size: 15px;
+			font-weight: bold;
+			margin: 0;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 12px
+			}
+		}
+
+		p {
+			font-size: 14px;
+			color: white;
+			margin: 0;
+
+			@include media-breakpoint-down(lg) {
+				font-size: 12px
+			}
+		}
+
+		a {
+			font-size: 14px;
+			color: white;
+		}
+
+		.icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: #a96733;
+
+			span {
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border: 1px solid #a96733;
+			}
+
+			.fas {
+				font-size: 13px;
+			}
+
+			.fa-phone {
+				transform: rotate(180deg)
+			}
+
+			@include media-breakpoint-down(md) {
+				font-size: 25px;
+			}
+			@include media-breakpoint-down(sm){
+				padding-top: 30px;
+				padding-right: 0 !important;
+
+			}
+		}
+		.center-sm{
+			@include media-breakpoint-down(sm){
+				justify-content: center;
+				flex-direction: column;
+
+			}
+		}
+	}
+	.footer-fout-row {
+		p,ul{
+			margin: 0;
+			padding: 0;
+		}
+		p{
+			font-size: 11px;
+			color: #535d5b !important;
+		}
+		ul{
+			display: flex;
+			list-style: none;
+			li{
+				padding-right: 10px;
+				a{
+					color: #535d5b;
+					&:hover {
+						color: $primary;
+					}
+				}
+			}
 		}
 	}
 }
