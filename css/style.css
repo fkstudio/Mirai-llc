@@ -10757,21 +10757,18 @@ a:focus {
 }
 
 #header .topHeader img {
-  width: 290px;
-  height: 50px;
+  height: 75px;
 }
 
 @media (max-width: 1199.98px) {
   #header .topHeader img {
-    height: 50px;
-    width: 220px;
+    height: 75px;
   }
 }
 
 @media (max-width: 991.98px) {
   #header .topHeader img {
-    height: 60px;
-    width: 310px;
+    height: 75px;
   }
 }
 
@@ -13251,7 +13248,7 @@ footer#footer input[type=text]::placeholder {
 }
 
 footer#footer .logo {
-  width: 299px;
+  width: 190px;
   height: 60px;
 }
 
