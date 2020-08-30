@@ -11464,23 +11464,23 @@ header .main-nav .main-menu::after {
   background-color: #82c625;
 }
 
-#content .filter-result-information, #content #findCars-StockList {
+#content .filter-result-information {
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 @media (max-width: 991.98px) {
-  #content .filter-result-information .row .pagination, #content #findCars-StockList .row .pagination {
+  #content .filter-result-information .row .pagination {
     margin-top: 10px;
   }
 }
 
-#content .filter-result-information .number-avaliable-cars, #content #findCars-StockList .number-avaliable-cars {
+#content .filter-result-information .number-avaliable-cars {
   position: relative;
   padding: 10px 40px;
 }
 
-#content .filter-result-information .number-avaliable-cars p, #content #findCars-StockList .number-avaliable-cars p {
+#content .filter-result-information .number-avaliable-cars p {
   margin: 0;
   font-size: 16px;
   color: white;
@@ -11489,20 +11489,20 @@ header .main-nav .main-menu::after {
 }
 
 @media (max-width: 767.98px) {
-  #content .filter-result-information .number-avaliable-cars p, #content #findCars-StockList .number-avaliable-cars p {
+  #content .filter-result-information .number-avaliable-cars p {
     font-size: 12px;
     display: inline;
   }
 }
 
 @media (max-width: 767.98px) {
-  #content .filter-result-information .number-avaliable-cars, #content #findCars-StockList .number-avaliable-cars {
+  #content .filter-result-information .number-avaliable-cars {
     padding: 10px 0px;
     padding-left: 20px;
   }
 }
 
-#content .filter-result-information .number-avaliable-cars::before, #content #findCars-StockList .number-avaliable-cars::before {
+#content .filter-result-information .number-avaliable-cars::before {
   position: absolute;
   content: "";
   background-color: #82c625;
@@ -11516,60 +11516,9 @@ header .main-nav .main-menu::after {
 }
 
 @media (max-width: 767.98px) {
-  #content .filter-result-information .number-avaliable-cars::before, #content #findCars-StockList .number-avaliable-cars::before {
+  #content .filter-result-information .number-avaliable-cars::before {
     width: 93%;
     left: 11px;
-  }
-}
-
-#content .filter-result-information .pagination, #content #findCars-StockList .pagination {
-  margin: 0;
-  width: 100%;
-}
-
-#content .filter-result-information .pagination li, #content #findCars-StockList .pagination li {
-  padding: 10px 15px;
-  position: relative;
-  margin-right: 5px;
-}
-
-#content .filter-result-information .pagination li::before, #content #findCars-StockList .pagination li::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  -webkit-transform: skew(-27deg);
-          transform: skew(-27deg);
-  background-color: #82c625;
-  border-left: red;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-#content .filter-result-information .pagination li a, #content #findCars-StockList .pagination li a {
-  color: white;
-}
-
-#content .filter-result-information .pagination .prev::before, #content #findCars-StockList .pagination .prev::before, #content .filter-result-information .pagination .next::before, #content #findCars-StockList .pagination .next::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  -webkit-transform: skew(-27deg);
-          transform: skew(-27deg);
-  background-color: #000000;
-  border-left: red;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-@media (max-width: 767.98px) {
-  #content .filter-result-information .pagination, #content #findCars-StockList .pagination {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -11705,6 +11654,57 @@ header .main-nav .main-menu::after {
 
 #content .filter-results li a .more-details:hover::before {
   background-color: #ebc52b;
+}
+
+#content .pagination {
+  margin: 0;
+  width: 100%;
+}
+
+#content .pagination li {
+  padding: 10px 15px;
+  position: relative;
+  margin-right: 5px;
+}
+
+#content .pagination li::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+  background-color: #82c625;
+  border-left: red;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#content .pagination li a {
+  color: white;
+}
+
+#content .pagination .prev::before, #content .pagination .next::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  -webkit-transform: skew(-27deg);
+          transform: skew(-27deg);
+  background-color: #000000;
+  border-left: red;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 767.98px) {
+  #content .pagination {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 #content .show-more-btn {
@@ -12232,11 +12232,15 @@ header .main-nav .main-menu::after {
   font-weight: bold;
 }
 
-#content .imgStocklist {
+#content .img-stocklist {
   background-position: center -82px !important;
 }
 
-#content #findCars-StockList .filterResults ul {
+#content .stocklist-section {
+  margin-bottom: 70px;
+}
+
+#content .stocklist-section .filterResults ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -12250,30 +12254,30 @@ header .main-nav .main-menu::after {
           justify-content: center;
 }
 
-#content #findCars-StockList .filterResults ul li {
+#content .stocklist-section .filterResults ul li {
   margin-bottom: 30px;
   margin-right: 20px;
   width: 23%;
 }
 
 @media (max-width: 991.98px) {
-  #content #findCars-StockList .filterResults ul li {
+  #content .stocklist-section .filterResults ul li {
     width: 30%;
   }
 }
 
 @media (max-width: 767.98px) {
-  #content #findCars-StockList .filterResults ul li {
+  #content .stocklist-section .filterResults ul li {
     width: 100%;
     margin-right: 0;
   }
 }
 
-#content #findCars-StockList .filterResults ul li a {
+#content .stocklist-section .filterResults ul li a {
   text-decoration: none;
 }
 
-#content #findCars-StockList .filterResults ul li .card {
+#content .stocklist-section .filterResults ul li .card {
   border-radius: 0;
   height: 100%;
   border: none;
@@ -12288,13 +12292,13 @@ header .main-nav .main-menu::after {
           align-items: center !important;
 }
 
-#content #findCars-StockList .filterResults ul li .card .card-body {
+#content .stocklist-section .filterResults ul li .card .card-body {
   padding-top: 3px;
   padding-left: 0px;
   padding-right: 3px;
 }
 
-#content #findCars-StockList .filterResults ul li .card img {
+#content .stocklist-section .filterResults ul li .card img {
   width: 90%;
   height: 194px !important;
   border-radius: 0;
@@ -12309,19 +12313,19 @@ header .main-nav .main-menu::after {
 }
 
 @media (max-width: 1199.98px) {
-  #content #findCars-StockList .filterResults ul li .card img {
+  #content .stocklist-section .filterResults ul li .card img {
     width: 100%;
   }
 }
 
-#content #findCars-StockList .filterResults ul li .card ul {
+#content .stocklist-section .filterResults ul li .card ul {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-#content #findCars-StockList .filterResults ul li .card ul li {
+#content .stocklist-section .filterResults ul li .card ul li {
   width: 100%;
   margin: 0;
   color: black;
@@ -12329,13 +12333,13 @@ header .main-nav .main-menu::after {
   font-size: 14px;
 }
 
-#content #findCars-StockList .filterResults ul li .card ul li span {
+#content .stocklist-section .filterResults ul li .card ul li span {
   text-transform: uppercase;
   color: #82c625;
   font-weight: 400;
 }
 
-#content #findCars-StockList .filterResults .moreCars {
+#content .stocklist-section .filterResults .moreCars {
   position: relative;
   padding: 5px 20px;
   text-transform: capitalize;
@@ -12356,7 +12360,7 @@ header .main-nav .main-menu::after {
   background-color: transparent;
 }
 
-#content #findCars-StockList .filterResults .moreCars::before {
+#content .stocklist-section .filterResults .moreCars::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -12369,11 +12373,11 @@ header .main-nav .main-menu::after {
           transform: skew(-27deg);
 }
 
-#content #findCars-StockList .filterResults .moreCars:hover {
+#content .stocklist-section .filterResults .moreCars:hover {
   color: black;
 }
 
-#content #findCars-StockList .filterResults .moreCars:hover::before {
+#content .stocklist-section .filterResults .moreCars:hover::before {
   background-color: #ebc52b;
 }
 

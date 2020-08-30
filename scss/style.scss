@@ -812,52 +812,6 @@ header {
 				}
 			}
 		}
-
-		.pagination {
-			margin: 0;
-			width: 100%;
-
-			li {
-				padding: 10px 15px;
-				position: relative;
-				margin-right: 5px;
-			
-				&::before{
-					position: absolute;
-					content:"";
-					height: 100%;
-					width: 100%;
-					transform: skew(-27deg);
-					background-color: #82c625;
-					border-left: red;
-					top: 0;
-					left: 0;
-					z-index: -1;
-				}
-				a{
-					color: white;
-				}
-			}
-
-			.prev,.next {
-				&::before {
-					position: absolute;
-					content:"";
-					height: 100%;
-					width: 100%;
-					transform: skew(-27deg);
-					background-color: #000000;
-					border-left: red;
-					top: 0;
-					left: 0;
-					z-index: -1;
-				}
-			}
-
-			@include media-breakpoint-down(sm) {
-				justify-content: center;
-			}
-		}
 	}
 
 	.filter-results {
@@ -957,6 +911,52 @@ header {
 					}
 				}
 			}
+		}
+	}
+
+	.pagination {
+		margin: 0;
+		width: 100%;
+
+		li {
+			padding: 10px 15px;
+			position: relative;
+			margin-right: 5px;
+		
+			&::before{
+				position: absolute;
+				content:"";
+				height: 100%;
+				width: 100%;
+				transform: skew(-27deg);
+				background-color: #82c625;
+				border-left: red;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+			a{
+				color: white;
+			}
+		}
+
+		.prev,.next {
+			&::before {
+				position: absolute;
+				content:"";
+				height: 100%;
+				width: 100%;
+				transform: skew(-27deg);
+				background-color: #000000;
+				border-left: red;
+				top: 0;
+				left: 0;
+				z-index: -1;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			justify-content: center;
 		}
 	}
 
@@ -1372,12 +1372,12 @@ header {
 	}
 
 	//STOCK_LIST
-	.imgStocklist {
+	.img-stocklist {
 		background-position: center -82px !important;
 	}
 
-	#findCars-StockList {
-		@extend .filter-result-information;
+	.stocklist-section {
+		margin-bottom: 70px;
 		
 		.filterResults {
 			ul {
@@ -2103,6 +2103,7 @@ header {
 			font-size: 20px;
 		}
 	}
+	
 	.pakingImgGallery{
 		img{
 			margin-top: 30px;
