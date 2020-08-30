@@ -5,11 +5,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+$primary: #82c625;
+
 body {
 	overflow-x: hidden;
 }
 
-b p {
+p {
 	@include media-breakpoint-down(sm) {
 		font-size: 0.88rem; // 14 px
 	}
@@ -44,8 +46,6 @@ p {
 	color: #535d5b;
 }
 
-$primary: #82c625;
-
 .color-primay {
 	color: $primary;
 }
@@ -66,11 +66,13 @@ $primary: #82c625;
 a {
 	text-decoration: none !important;
 	cursor: pointer;
+
 	&:focus{
 		box-shadow: transparent !important;
 		outline: none !important;
 	}
 }
+
 .btn {
 
 	background-color: $primary;
@@ -86,21 +88,6 @@ a {
 
 }
 
-.fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	bottom: auto;
-	background: rgba(234, 237, 240, .8);
-	box-shadow: 0 0 4px rgba(0, 0, 0, .4);
-
-	@include media-breakpoint-down(md) {
-		position: relative;
-		left: auto;
-	}
-}
-
 .img-one {
 	position: relative;
 
@@ -114,14 +101,14 @@ a {
 	}
 }
 
-#header {
+header {
 	background-color: black;
 	width: 100%;
 	top: 0;
 	left: 0;
 	z-index: 1000;
 
-	.topHeader {
+	.top-header {
 
 		h3 {
 			color: $primary;
@@ -134,7 +121,8 @@ a {
 			}
 		}
 
-		p {
+		p, 
+		a {
 			font-size: 14px;
 			color: white;
 			margin: 0;
@@ -145,43 +133,23 @@ a {
 		}
 
 		a {
-			font-size: 14px;
-			color: white;
+			transition-duration: 0.3s;
+			
+			&:hover {
+				color: $primary;
+			}
 		}
 
-		.form-group {
-			width: 50%;
-			height: 100%;
-
-			@include media-breakpoint-down(lg) {
-				width: 100%;
-			}
-
+		form {
 			.form-control {
-				padding: 10px;
 				height: 20px;
-				font-size: 14px;
-				color: white;
-				background: transparent;
-				border: none;
-
-				@include media-breakpoint-down(lg) {
-					padding: 0;
-				}
+				padding: 0px;
 			}
 		}
 
 		.row:nth-child(1) {
 			position: relative;
-
-			&::after {
-				position: absolute;
-				content: "";
-				width: 100%;
-				height: 1.5px;
-				background: #535d5b;
-				bottom: 1px;
-			}
+			border-bottom: 1px solid #535d5b;;
 		}
 
 		img {
@@ -196,67 +164,58 @@ a {
 			}
 		}
 
-		.icon {
+		.circle-icon {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			color: #a96733;
-			padding: 20px;
-
-			span {
-				width: 25px;
-				height: 25px;
-				border-radius: 50%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border: 1px solid #a96733;
-			}
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 1px solid #a96733;
 
 			.fas {
 				font-size: 13px;
+				color: #a96733;
+
+				@include media-breakpoint-down(md) {
+					font-size: 25px;
+				}
 			}
 
 			.fa-phone {
 				transform: rotate(180deg)
 			}
-
-			@include media-breakpoint-down(md) {
-				font-size: 25px;
-			}
 		}
 
-		#social {
-			color: white;
-			text-transform: uppercase;
-			font-size: 15px;
-			font-weight: bold;
-			margin-bottom: 4px;
-
-			@include media-breakpoint-down(lg) {
-				font-size: 12px
-			}
-		}
-
-		.socialIcons {
+		.social-media-icons {
 			display: flex;
 
 			a {
 				text-decoration: none;
 				cursor: pointer;
+				display: block;
+				width: 25px;
+				height: 25px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-right: 5px;
+				background-color: $primary;
+				transition-duration: 0.3s;
 
-				span {
-					width: 25px;
-					height: 25px;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					margin-right: 5px;
-					background-color: $primary;
+				i {
+					font-size: 13px;
+					color: white;
+				}
 
+				&:hover {
+					background-color: white;
+					
 					i {
-						font-size: 13px;
-						color: white;
+						color: $primary;
 					}
 				}
 			}
@@ -1223,7 +1182,6 @@ a {
 		}
 	}
 
-
 	//about us
 	.welcome-page-introduction {
 		background-repeat: no-repeat;
@@ -1626,7 +1584,6 @@ a {
 		}
 	}
 
-
 	//BANK INFO
 	.dataBankInfo {
 		margin-top: 57px;
@@ -1818,7 +1775,8 @@ a {
 			cursor: pointer;
 		}
 	}
-	.loginImg{
+
+	.loginImg {
 		margin-top: 100px;
 	}
 
@@ -1923,7 +1881,7 @@ a {
 	}
 
 	//CAR DETAILS
-	.galleryCar{
+	.galleryCar {
 		.flickity-button,.flickity-page-dots {
 			display: none;
 		}
@@ -1953,7 +1911,8 @@ a {
 		}
 		  
 	}
-	.fastNavDetail{
+
+	.fastNavDetail {
 		.breadcrumb{
 			background-color: transparent;
 			padding-left: 0;
@@ -1969,7 +1928,8 @@ a {
 			}
 		}
 	}
-	.dataCar{
+
+	.dataCar {
 		.specifCar{
 			column-count: 2;
 			padding: 0;
@@ -2005,7 +1965,8 @@ a {
 			}
 		}
 	}
-	.security{
+
+	.security {
 		p{
 			margin-bottom: 0;
 		}
@@ -2112,102 +2073,112 @@ a {
 
 	// BUSSINESS INFO VIEWS
 
-		//auction
-		.auction{
-			.img-one{	
-				img{
-					top: -110px;
-					@include media-breakpoint-down(lg){
-						top: -90px;
-					}
-				}
-			}
-			.map{
-				margin-top: 90px;
-				@include media-breakpoint-down(sm){
-					margin-top: 60px;
-				}
-			}
-		}
-		//container
-		.dimensions{
-			margin-top: 20px;
-		}
-		//sun protection
-		.sunImg{
-			margin-top: 20px;
+	//auction
+	.auction {
+		.img-one{	
 			img{
-				// width: 100%;
-				// height: 100%; 
-				width: 450px;
-				height: 100%;
-				@include media-breakpoint-down(md){
-					width: 300px;
+				top: -110px;
+				@include media-breakpoint-down(lg){
+					top: -90px;
 				}
 			}
-			@include media-breakpoint-down(sm){
-				display: flex;
-				justify-content: center;
-			}
 		}
-		//mark
-		.markImgGallery{
-			margin-top: 120px;
+		.map{
+			margin-top: 90px;
 			@include media-breakpoint-down(sm){
 				margin-top: 60px;
 			}
 		}
-		.markImg,.equiImg{
-			img{
-				// width: 100%;
-				// height: 100%;
-				width: 200px;
-				height: 200px;
+	}
+
+	//container
+	.dimensions {
+		margin-top: 20px;
+	}
+
+	//sun protection
+	.sunImg {
+		margin-top: 20px;
+		img{
+			// width: 100%;
+			// height: 100%; 
+			width: 450px;
+			height: 100%;
+			@include media-breakpoint-down(md){
+				width: 300px;
 			}
 		}
-		.markImg{
-			margin-top: 10px;
+		@include media-breakpoint-down(sm){
+			display: flex;
+			justify-content: center;
 		}
-		//understand sheet
-		.sheetImg{
+	}
+
+	//mark
+	.markImgGallery {
+		margin-top: 120px;
+		@include media-breakpoint-down(sm){
+			margin-top: 60px;
+		}
+	}
+
+	.markImg,.equiImg {
+		img{
+			// width: 100%;
+			// height: 100%;
+			width: 200px;
+			height: 200px;
+		}
+	}
+
+	.markImg{
+		margin-top: 10px;
+	}
+
+	//understand sheet
+	.sheetImg{
+		margin-top: 30px;
+	}
+
+	//equiments
+	.equimentImgGallery{
+		margin-top: 260px;
+		@include media-breakpoint-down(md){
+			margin-top: 100px;
+		}
+		@include media-breakpoint-down(sm){
+			margin-top: 60px;
+		}
+	}
+
+	.equiImg{
+		display: flex;
+		@include media-breakpoint-down(sm){
+			justify-content: center;
+		}
+	}
+
+	.equiImg{
+		margin-top: 20px;
+	}
+
+	//paking
+	.paking{
+		p{
+			margin: 0;
+		}
+		h3{
+			font-size: 20px;
+		}
+	}
+	.pakingImgGallery{
+		img{
 			margin-top: 30px;
 		}
-		//equiments
-		.equimentImgGallery{
-			margin-top: 260px;
-			@include media-breakpoint-down(md){
-				margin-top: 100px;
-			}
-			@include media-breakpoint-down(sm){
-				margin-top: 60px;
-			}
-		}
-		.equiImg{
-			display: flex;
-			@include media-breakpoint-down(sm){
-				justify-content: center;
-			}
-		}
-		.equiImg{
-			margin-top: 20px;
-		}
-		//paking
-		.paking{
-			p{
-				margin: 0;
-			}
-			h3{
-				font-size: 20px;
-			}
-		}
-		.pakingImgGallery{
-			img{
-				margin-top: 30px;
-			}
-		}
+	}
 }
 
-footer#footer {
+footer {
 	margin-top: 30px;
 	padding-top: 15px;
 	padding-bottom: 15px;
