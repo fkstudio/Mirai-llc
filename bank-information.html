@@ -38,7 +38,7 @@
 				</div>
 				<div class="row pt-3 pb-3">
 					<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex align-items-center">
-						<img src="img/logo.png">
+						<a href="index.html"><img src="img/logo.png"></a>
 					</div>
 					<div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-xs-12 d-flex align-items-center">
 						<span class="circle-icon mr-3"><i class="fas fa-map-marker-alt"></i></span>
@@ -104,19 +104,19 @@
 	</header>
 	<!-- main -->
     <main id="content">
-        <section>
-            <div class="welcome-page-introduction" style="background-image: url(img/welcomeBankInfo.jpg);">
-                <div class="caption">
-                    <div class="container">
-                        <div class="col-lg-7">
-                            <h1>Bank Information</h1>
-                        </div>
+        <section class="welcome-page-introduction" style="background-image: url(img/welcomeBankInfo.jpg);">
+            <div class="caption">
+                <div class="container">
+                    <div class="col-lg-7">
+                        <h1>Bank Information</h1>
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="bank-information">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 dataBankInfo">
+                    <div class="col-lg-9">
                         <h3>FOR US$ ONLY: ACCOUNT #1</h3>
                         <table class="table mb-5">
                             <tbody>
@@ -192,8 +192,6 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="row dataBankInfo">
                     <div class="col-lg-6 col-md-6">
                         <h2 class="text-center ">USA CORRESPONDING BANK</h2>
                         <table class="table mb-5">
@@ -255,7 +253,7 @@
                                 <tr>
                                     <th>BANK PHONE:</th>
                                     <td>
-                                        +81-45-311-3731
+                                        <a href="tel:+81453113731">+81-45-311-3731</a>
                                     </td>
                                 </tr>
                                 <tr>
@@ -267,9 +265,7 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-9 dataBankInfo">
+                    <div class="col-lg-9">
                         <h3>POST OFFICE ACCOUNT:</h3>
                         <table class="table mb-5">
                             <tbody>
@@ -347,119 +343,86 @@
         </section>
     </main>
     <!-- footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-firts-row p-0">
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-6 pl-lg-2 pl-md-3">
-                        <img src="img/logo.png" class="img-fluid logo">
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit consectetur dolore
-                            perspiciatis ipsum molestias sed nihil doloremque accusantium sint quis dolores, nobis
-                            dolorem perferendis accusamus pariatur illo veniam impedit rem?</p>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5>photo gallery</h5>
-                        <div class="photoGallery">
-                            <img src="img/blog3.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-                            <img src="img/blog3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-                            <img src="img/blog3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-                            <img src="img/blog3.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-                            <div id="myModal" class="modal">
-                                <span class="close cursor" onclick="closeModal()">&times;</span>
-                                <div class="modal-content">
-                                    <div class="mySlides">
-                                        <div class="numbertext">1 / 4</div>
-                                        <img src="img/blog3.jpg">
-                                    </div>
-
-                                    <div class="mySlides">
-                                        <div class="numbertext">2 / 4</div>
-                                        <img src="img/blog3.jpg">
-                                    </div>
-
-                                    <div class="mySlides">
-                                        <div class="numbertext">3 / 4</div>
-                                        <img src="img/blog3.jpg">
-                                    </div>
-
-                                    <div class="mySlides">
-                                        <div class="numbertext">4 / 4</div>
-                                        <img src="img/blog3.jpg">
-                                    </div>
-
-                                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mt-md-4 mt-lg-0">
-                        <h5>Latest blog post</h5>
-                        <div class="blogsLinks">
-                            <a href="#">The Tesla model S isn't the firt truly autonomous car on the road...</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-6 mt-md-4 mt-lg-0">
-                        <h5 id="social">Social NetWork</h5>
-                        <div class="social-media-icons">
-                            <a><span><i class="fab fa-facebook-f"></i></span></a>
-                            <a><span><i class="fab fa-twitter"></i></span></a>
-                            <a><span><i class="fab fa-instagram"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-second-row pt-5">
-                <div class="row">
-                    <div class="col-lg-4 pl-lg-2 pl-md-3">
-                        <form>
-                            <div class="form-group">
-                                <label>subscribe</label>
-                                <input type="text" class="form-control" placeholder="Your email here">
-                            </div>
-                            <button class="btn float-right send">send</button>
-                        </form>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <h3>About us</h3>
-                        <a href="#">Customer feedback</a>
-                        <a href="#">Privacy statement</a>
-                        <a href="#">Safe</a>
-                        <a href="#">Terms and Conditions</a>
-                        <a href="#">Cookies and Privacy Policy</a>
-                        <a href="#">Site map</a>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <h3>Products and service</h3>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <h3>Join the community</h3>
-                        <a href="#">Blog</a>
-                        <a href="#">Environment</a>
-                        <a href="#">Career/Job Oportunities</a>
-                    </div>
-                    <div class="col-lg-2 col-md-3">
-                        <h3>Need help</h3>
-                        <a href="faqs.html">FAQ's</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-third-row row mb-0 pb-0 mt-5">
-                <div class="col-xl-5 col-lg-5 p-0 d-flex justify-content-center">
-                    <p>All Web Site contents, including promotions and pricing, are subject to change without notice.</p>
-                </div>
-                <div class="col-xl-4 col-lg-3 d-flex justify-content-center">
-                    <p>	Copyright © 2017 Adobe Systems Incorparated. All rights reserved.</p>
-                </div>
-                <div class="col-xl-3 col-lg-4 p-0 text-center d-flex justify-content-center">
-                    <ul>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Condiciones de uso</a></li>
-                        <li><a href="#">Cookies</a></li>
-                    </ul>
-                </div>
-            </div>
-    </footer>
+	<footer>
+		<div class="container">
+			<div class="footer-firts-row p-0">
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6">
+						<img src="img/logo.png" class="img-fluid logo">
+						<p class="mb-0 pt-3"><b>Adress:</b> 3-2119-21 Miwa Midori Yama</p>
+						<p class="mb-0 p-0"><b>District:</b> Machida <b>City:</b> Tokyo, Japan</p>
+						<p class="mb-0 p-0"><b>Postal Code:</b>195-0055</p>
+						<p class="mb-0 p-0">
+							<b>Phone:</b><a href="tel:818033017103">+81-80-3301-7103</a>
+							<b>Fax:</b><a href="tel:03-6770-9784"> 03-6770-9784</a>
+							<b>Whatsapp</b><a target="_blank" href="https://api.whatsapp.com/send?phone=+818033017103">+818033017103</a>
+						</p>
+						<p class="mb-0 p-0"><b>Inquiries:</b><a href="mailto:sales@miraitradingllc.com"> sales@miraitradingllc.com</a></p>
+					</div>
+					<div class="col-lg-3 col-md-6 mt-md-4 mt-lg-0">
+						<h5>Latest blog post</h5>
+						<div class="blogsLinks">
+							<a href="#">The Tesla model S isn't the firt truly autonomous car on the road...</a>
+						</div>
+					</div>
+					<div class="col-lg-2 col-md-6 mt-md-4 mt-lg-0">
+						<h5 id="social">Social NetWork</h5>
+						<div class="social-media-icons">
+							<a><span><i class="fab fa-facebook-f"></i></span></a>
+							<a><span><i class="fab fa-twitter"></i></span></a>
+							<a><span><i class="fab fa-instagram"></i></span></a>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<h3>About us</h3>
+						<a href="#">Customer feedback</a>
+						<a href="#">Privacy statement</a>
+						<a href="#">Safe</a>
+						<a href="terms-and-conditions.html">Terms and Conditions</a>
+						<a href="#">Cookies and Privacy Policy</a>
+						<a href="#">Site map</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-second-row pt-5">
+				<div class="row">
+					<div class="col-lg-4 pl-lg-2 pl-md-3">
+						<form>
+							<div class="form-group">
+								<label>subscribe</label>
+								<input type="text" class="form-control" placeholder="Your email here">
+							</div>
+							<button class="btn float-right send">send</button>
+						</form>
+					</div>
+					<div class="col-lg-3 col-md-3">
+						<h3>Join the community</h3>
+						<a href="#">Blog</a>
+						<a href="#">Environment</a>
+						<a href="#">Career/Job Oportunities</a>
+					</div>
+					<div class="col-lg-2 col-md-3">
+						<h3>Need help</h3>
+						<a href="faqs.html">FAQ's</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-third-row row mb-0 pb-0 mt-5">
+				<div class="col-xl-5 col-lg-5 p-0 d-flex justify-content-center">
+					<p>All Web Site contents, including promotions and pricing, are subject to change without notice.</p>
+				</div>
+				<div class="col-xl-4 col-lg-3 d-flex justify-content-center">
+					<p>	Copyright © 2017 Adobe Systems Incorparated. All rights reserved.</p>
+				</div>
+				<div class="col-xl-3 col-lg-4 p-0 text-center d-flex justify-content-center">
+					<ul>
+						<li><a href="#">Privacidad</a></li>
+						<li><a href="#">Condiciones de uso</a></li>
+						<li><a href="#">Cookies</a></li>
+					</ul>
+				</div>
+			</div>
+	</footer>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>

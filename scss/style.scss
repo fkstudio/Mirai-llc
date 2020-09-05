@@ -11,25 +11,39 @@ body {
 	overflow-x: hidden;
 }
 
-// p {
-// 	@include media-breakpoint-down(sm) {
-// 		font-size: 0.88rem; // 14 px
-// 	}
+.background-title-green {
+	position: relative;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: white;
+	
+	h3 {
+		margin: 0px;
+	}
 
-// 	@include media-breakpoint-up(md) {
-// 		font-size: 1rem; // 16 px
-// 	}
-// }
+	@include media-breakpoint-down(sm) {
+		font-size: 18px;
+	}
 
-// h1 {
-// 	@include media-breakpoint-down(sm) {
-// 		font-size: 1.8rem; // 28 px
-// 	}
+	&::after {
+		position: absolute;
+		content: "";
+		width: 1090px;
+		height: 88px;
+		left: -450px;
+		background-color: #82c625;
+		z-index: -1;
+		top: -16px;
+		clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
 
-// 	@include media-breakpoint-up(md) {
-// 		font-size: 2.5rem; // 40 px
-// 	}
-// }
+		@include media-breakpoint-down(sm) {
+			width: 725px;
+			height: 68px;
+			left: -450px;
+			top: -13px;
+		}
+	}
+}
 
 h2 {
 	@include media-breakpoint-down(sm) {
@@ -50,15 +64,32 @@ p {
 	color: $primary;
 }
 
-.form-group {
-	label {
-		text-transform: uppercase;
-		color: white;
-		font-weight: bold;
-		font-size: 16px;
+form {
+	.form-group {
+		label {
+			text-transform: uppercase;
+			color: black;
+			font-weight: bold;
+			font-size: 16px;
+	
+			@include media-breakpoint-down(lg) {
+				font-size: 14px;
+			}
+		}
+	}
 
-		@include media-breakpoint-down(lg) {
-			font-size: 14px;
+	.btn {
+		width: 120px;
+		height: 40px;
+		padding: 0;
+
+		&:hover {
+			color: white;
+			background-color: #ebc52b;
+		}
+
+		&:focus {
+			outline: transparent;
 		}
 	}
 }
@@ -74,7 +105,6 @@ a {
 }
 
 .btn {
-
 	background-color: $primary;
 	display: flex;
 	justify-content: center;
@@ -85,10 +115,9 @@ a {
 	text-decoration: none;
 	cursor: pointer;
 	border-radius: 0;
-
 }
 
-.img-one {
+.image-description-page {
 	position: relative;
 
 	img {
@@ -97,6 +126,16 @@ a {
 
 		@include media-breakpoint-down(md) {
 			position: static;
+		}
+	}
+
+	&.container-dimensions {
+		img {
+			top: -110px;
+
+			@include media-breakpoint-down(lg) {
+				top: -90px;
+			}
 		}
 	}
 }
@@ -331,18 +370,23 @@ header {
 			}
 
 			> li {
-				padding: 13px;
 				z-index: 2;
 				position: relative;
 				transition-duration: 0.3s;
+				height: 100%;
 
 				@include media-breakpoint-down(lg) {
 					padding: 10px;
 				}
 
 				> a {
+					padding: 13px;
+					display: flex;
+					align-items: center;
+					height: 100%;
 					text-decoration: none;
 					text-transform: uppercase;
+					line-height: 0;
 					font-weight: 700;
 					font-style: normal;
 					color: #232628;
@@ -353,8 +397,7 @@ header {
 					}
 
 					@include media-breakpoint-down(md) {
-						padding: 8px;
-						display: block;
+						// padding: 8px;
 						line-height: 1;
 						color: white;
 					}
@@ -455,8 +498,8 @@ header {
 				width: 33%;
 				background-color: #82c625;
 				height: 100%;
-				// right: 0;
 				right: -160px;
+
 				@include media-breakpoint-down(lg) {
 					width:43%;
 					right: -125px;
@@ -482,12 +525,12 @@ header {
 	.welcome-page-introduction {
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center -430px;
+		// background-position: center -430px;
+		background-position: center;
 		min-height: 160px;
 
 		@include media-breakpoint-down(md) {
 			background-position: center -185px;
-			// margin-top: 70px;
 		}
 
 		@include media-breakpoint-down(sm) {
@@ -507,6 +550,7 @@ header {
 				font-weight: bold;
 				color: white;
 				text-transform: uppercase;
+				margin: 0;
 
 				@include media-breakpoint-down(md) {
 					font-size: 20px;
@@ -529,6 +573,7 @@ header {
 					text-align: center;
 				}
 			}
+
 			span {
 				color: $primary;
 			}
@@ -889,6 +934,7 @@ header {
 					justify-content: center;
 					align-items: center;
 					color: white;
+					font-weight: bold;
 					transition-duration: 0.3s;
 		
 					&::before {
@@ -972,6 +1018,7 @@ header {
 		}
 	}
 
+	/*
 	.filterResults {
 		ul {
 			padding: 0;
@@ -1079,6 +1126,7 @@ header {
 		}
 		
 	}
+	*/
 
 	.information-about-us {
 		background-image: url("../img/sectionAboutUs.jpg");
@@ -1161,6 +1209,7 @@ header {
 	}
 
 	.choose-us {
+
 		h3 {
 			text-align: center;
 			text-transform: uppercase;
@@ -1170,17 +1219,8 @@ header {
 			padding-top: 50px;
 			margin: 0;
 		}
-		.row {
-			padding-top: 30px;
-			height: 40vh;
-			align-items: center;
 
-			@include media-breakpoint-down(md) {
-				height: 100%;
-			}
-		}
-
-		.chooseCard {
+		.choose-card-information {
 			display: flex;
 			align-items: flex-start;
 			min-height: 200px;
@@ -1240,16 +1280,16 @@ header {
 				}
 			}
 		}
-		.show-moreBtn{
+
+		.btn {
 			padding: 10px 20px;
-			&:hover{
-				color: black;
+
+			&:hover {
+				color: white;
 				background-color: #ebc52b;
 			}
 		}
 	}
-
-	//about us
 
 	.about-us-image {
 		position: relative;
@@ -1306,73 +1346,26 @@ header {
 		}
 	}
 
-	.info-company {
+	.information-company {
 		p {
 			font-size: 16px;
-			color: #535d5b;
-			padding-right: 20px;
 
 			@include media-breakpoint-down(sm) {
 				text-align: center;
-				padding-right: 0;
 			}
 		}
 	}
 
 	.data-info-company {
-		margin-top: -113px;
+		margin-top: 50px;
 		margin-bottom: 50px;
-
-		@include media-breakpoint-down(lg) {
-			margin-top: 30px;
-		}
 
 		@include media-breakpoint-down(sm) {
 			margin-top: 20px;
 		}
-
-		h3 {
-			position: relative;
-			text-transform: uppercase;
-			margin: 0;
-			font-weight: bold;
-			color: white;
-			display: flex;
-			align-items: center;
-
-			@include media-breakpoint-down(sm) {
-				font-size: 18px;
-			}
-
-			&::after {
-				position: absolute;
-				content: "";
-				width: 1090px;
-				height: 88px;
-				left: -450px;
-				background-color: #82c625;
-				z-index: -1;
-				top: -16px;
-				clip-path: polygon(0 0, 91% 0, 100% 100%, 0% 100%);
-
-				@include media-breakpoint-down(sm) {
-					width: 725px;
-					height: 68px;
-					left: -450px;
-					top: -13px;
-				}
-			}
-		}
-
-		p {
-			small {
-				font-weight: bold;
-			}
-		}
 	}
 
-	//STOCK_LIST
-	.img-stocklist {
+	.background-welcome-stocklist {
 		background-position: center -82px !important;
 	}
 
@@ -1490,7 +1483,7 @@ header {
 		}
 	}
 
-	.logos-cars {
+	.logos-cars-container {
 		width: 100%;
 
 		ul {
@@ -1516,8 +1509,7 @@ header {
 		}
 	}
 
-	//BANK INFO
-	.dataBankInfo {
+	.bank-information {
 		margin-top: 57px;
 
 		h3 {
@@ -1573,12 +1565,10 @@ header {
 					color: #a96733;
 					font-weight: bold;
 					font-size: 14px;
-
 				}
 
 				th,
 				td {
-					width: 20px;
 					border: none;
 					padding-left: 0;
 
@@ -1590,7 +1580,7 @@ header {
 					a {
 						text-decoration: none;
 						cursor: pointer;
-						color: #000000;
+						color: #a96733;
 
 						&:hover {
 							color: $primary;
@@ -1640,36 +1630,6 @@ header {
 		}
 	}
 
-	//REGISTRATION
-	.create-form {
-		.form-group {
-			label {
-				text-transform: uppercase;
-				color: black;
-				font-size: 14px;
-			}
-
-			input[type=text],
-			textarea,
-			input[type=password] {
-				border-radius: 0;
-				background-color: transparent !important;
-				border: 1px solid #82c625;
-
-				&:focus {
-					font-size: 15px;
-					color: #535d5b;
-					font-weight: bold;
-					border: 1px solid #82c625;
-				}
-
-				&::placeholder {
-					color: #535d5b !important;
-				}
-			}
-		}
-	}
-
 	.listInfoCreateUser {
 		color: #535d5b;
 
@@ -1699,8 +1659,7 @@ header {
 
 	}
 
-	//CONTACT FORM
-	.info {
+	.contact-information {
 		a {
 			color: $primary;
 			text-decoration: none;
@@ -1712,12 +1671,7 @@ header {
 		margin-top: 100px;
 	}
 
-	//WHY CHOOSE US
-	.whyImgWelcome {
-		background-position: center;
-	}
-
-	.whyInfo {
+	.why-us-information {
 		h3 {
 			text-transform: uppercase;
 			font-weight: bold;
@@ -1747,7 +1701,7 @@ header {
 		}
 	}
 
-	.buySteps {
+	.how-to-buy-steps {
 		h3 {
 			position: relative;
 			padding: 10px;
@@ -1782,8 +1736,8 @@ header {
 		}
 	}
 
-	//FAQS
-	.faqs {
+	.faqs-section {
+
 		h3 {
 			font-size: 23px;
 			font-weight: bold;
@@ -2003,110 +1957,57 @@ header {
 		}
 	}
 
-	// BUSSINESS INFO VIEWS
+	.mark-image-gallery-wrap {
+		margin-top: 200px;
 
-	//auction
-	.auction {
-		.img-one{	
-			img{
-				top: -110px;
-				@include media-breakpoint-down(lg){
-					top: -90px;
-				}
-			}
-		}
-		.map{
-			margin-top: 90px;
-			@include media-breakpoint-down(sm){
-				margin-top: 60px;
-			}
-		}
-	}
-
-	//container
-	.dimensions {
-		margin-top: 20px;
-	}
-
-	//sun protection
-	.sunImg {
-		margin-top: 20px;
-		img{
-			// width: 100%;
-			// height: 100%; 
-			width: 450px;
-			height: 100%;
-			@include media-breakpoint-down(md){
-				width: 300px;
-			}
-		}
-		@include media-breakpoint-down(sm){
-			display: flex;
-			justify-content: center;
-		}
-	}
-
-	//mark
-	.markImgGallery {
-		margin-top: 120px;
-		@include media-breakpoint-down(sm){
-			margin-top: 60px;
-		}
-	}
-
-	.markImg,.equiImg {
-		img{
-			// width: 100%;
-			// height: 100%;
-			width: 200px;
-			height: 200px;
-		}
-	}
-
-	.markImg{
-		margin-top: 10px;
-	}
-
-	//understand sheet
-	.sheetImg{
-		margin-top: 30px;
-	}
-
-	//equiments
-	.equimentImgGallery{
-		margin-top: 260px;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(lg){
 			margin-top: 100px;
 		}
+
+		@include media-breakpoint-down(md){
+			margin-top: 50px;
+		}
+
 		@include media-breakpoint-down(sm){
 			margin-top: 60px;
 		}
 	}
 
-	.equiImg{
+	.mark-image {
+		margin-bottom: 10px;
+
+		img {
+			@include size(250px);
+			object-fit: cover;
+		}
+
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+
+	.equiments-img {
 		display: flex;
-		@include media-breakpoint-down(sm){
-			justify-content: center;
-		}
-	}
-
-	.equiImg{
+		align-items: center;
 		margin-top: 20px;
+
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
 	}
 
-	//paking
-	.paking{
-		p{
-			margin: 0;
-		}
-		h3{
+	.paking-section {
+
+		h3 {
 			font-size: 20px;
 		}
-	}
-	
-	.pakingImgGallery{
-		img{
-			margin-top: 30px;
+
+		img {
+			margin-bottom: 20px;
+
+			@include media-breakpoint-down(sm) {
+				text-align: center;
+			}
 		}
 	}
 }
@@ -2118,6 +2019,10 @@ footer {
 	background-color: black;
 
 	form {
+		label {
+			color: white !important;
+		}
+
 		input[type=text] {
 			border-radius: 0;
 			background-color: transparent !important;
@@ -2152,7 +2057,6 @@ footer {
 
 	.logo {
 		width: 190px;
-		height: 60px;
 
 		@include media-breakpoint-down(sm) {
 			justify-content: center;
@@ -2230,134 +2134,16 @@ footer {
 		margin: 0;
 		font-size: 14px;
 
+		a {
+			display:inline;
+		}
+
 		@include media-breakpoint-down(lg) {
 			font-size: 13px;
 		}
 
 		@include media-breakpoint-down(sm) {
 			text-align: center;
-		}
-	}
-
-	.photoGallery {
-		display: flex;
-		flex-wrap: wrap;
-
-		@include media-breakpoint-down(sm) {
-			justify-content: center;
-		}
-
-		img {
-			width: 50px;
-			height: 50px;
-			margin-bottom: 10px;
-			object-fit: cover;
-			margin-right: 10px;
-		}
-
-		/* The Modal (background) */
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 9999;
-			padding-top: 100px;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: black;
-
-			.modal-content {
-				position: relative;
-				margin: auto;
-				padding: 0;
-				width: 80%;
-				display: flex;
-				justify-content: center;
-				background-color: black;
-			}
-
-			.close {
-				color: white;
-				position: absolute;
-				top: 10px;
-				right: 25px;
-				font-size: 35px;
-				font-weight: bold;
-			}
-
-			.close:hover,
-			.close:focus {
-				color: white;
-				text-decoration: none;
-				cursor: pointer;
-			}
-
-			.prev,
-			.next {
-				cursor: pointer;
-				position: absolute;
-				top: 50%;
-				width: auto;
-				padding: 16px;
-				margin-top: -50px;
-				color: white;
-				font-weight: bold;
-				font-size: 20px;
-				transition: 0.6s ease;
-				border-radius: 0 3px 3px 0;
-				user-select: none;
-				-webkit-user-select: none;
-			}
-
-			.next {
-				right: 0;
-				border-radius: 3px 0 0 3px;
-			}
-
-			.prev:hover,
-			.next:hover {
-				background-color: rgba(0, 0, 0, 0.8);
-			}
-
-			.numbertext {
-				color: #f2f2f2;
-				font-size: 12px;
-				padding: 8px 12px;
-				position: absolute;
-				top: 0;
-			}
-
-			img {
-				width: 90%;
-				height: 600px;
-				margin: 0 auto;
-				justify-content: center;
-				display: flex;
-
-				@include media-breakpoint-down(sm) {
-					width: 100%;
-					height: 320px;
-				}
-			}
-		}
-
-		.demo {
-			opacity: 0.6;
-		}
-
-		.active,
-		.demo:hover {
-			opacity: 1;
-		}
-
-		img.hover-shadow {
-			transition: 0.3s;
-		}
-
-		.hover-shadow:hover {
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 	}
 

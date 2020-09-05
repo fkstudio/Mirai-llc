@@ -11,15 +11,11 @@
   padding: $input-padding-y $input-padding-x;
   font-family: $input-font-family;
   @include font-size($input-font-size);
-  font-weight: $input-font-weight;
+  font-weight: 600;
   line-height: $input-line-height;
   color: $input-color;
-  background-color: $input-bg;
-  background-clip: padding-box;
-  border: $input-border-width solid $input-border-color;
-
-  // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include border-radius($input-border-radius, 0);
+  background-color: white;
+  border: 1px solid #82c625;
 
   @include box-shadow($input-box-shadow);
   @include transition($input-transition);
@@ -30,14 +26,17 @@
     border: 0;
   }
 
-  // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus();
-
   // Placeholder
   &::placeholder {
-    color: $input-placeholder-color;
-    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    color: #535d5b !important;
     opacity: 1;
+  }
+
+  &:focus {
+    font-size: 15px;
+    color: #535d5b;
+    font-weight: bold;
+    border: 1px solid #82c625;
   }
 
   // Disabled and read-only inputs
