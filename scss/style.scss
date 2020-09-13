@@ -1667,8 +1667,73 @@ header {
 		}
 	}
 
-	.loginImg {
-		margin-top: 100px;
+	.log-in-section {
+		.form-wrap {
+			border: 1px solid grey;
+			padding: 30px;
+			box-shadow: $box-shadow;
+
+			h4 {
+				font-size: 16px;
+			}
+
+			.create-account-button {
+				background-color: grey;
+				border-radius: 5px;
+				margin-top: 15px;
+				box-shadow: $box-shadow;
+				padding: 10px;
+				transition: 0.3s;
+
+				&:hover {
+					color: white;
+					background-color: $primary;
+				}
+			}
+
+			p {
+				font-size: 12px;
+				text-align: center;
+				color: grey;
+				margin-top: 15px;
+			}
+		}
+
+		form {
+
+			label {
+				text-transform: initial;
+				color: grey;
+				font-size: 14px;
+				width: 100%;
+				text-align: left;
+				
+				a {
+					display: inline-block;
+					float: right;
+				}
+			}
+
+			a {
+				font-size: 14px;
+				text-align: right;
+				display: block;
+			}
+
+			.form-control {
+				border-radius: 5px;
+				border-color: grey;
+			}
+
+			.form-check-label {
+				font-weight: 500;
+			}
+
+			.btn {
+				box-shadow: $box-shadow;
+				border-radius: 5px;
+			}
+		}
 	}
 
 	.why-us-information {
@@ -1767,14 +1832,16 @@ header {
 	}
 
 	//CAR DETAILS
-	.galleryCar {
-		.flickity-button,.flickity-page-dots {
+	.car-gallery {
+		.flickity-page-dots {
 			display: none;
 		}
+
 		.carousel{
 			background: transparent;
 			margin-bottom: 10px;
 		}
+
 		.carousel-cell {
 			width: 100%;
 			height: 320px;
@@ -1782,54 +1849,78 @@ header {
 			border: 2px solid #ED2;
 			counter-increment: carousel-cell;
 			padding: 5px;
+
 			img{
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				object-position: center;
 			}
 		}
+
 		.carousel-nav .carousel-cell {
 			height: 80px;
 			width: 100px;
 		}
+
 		.carousel-nav .carousel-cell.is-nav-selected {
 			background: #ED2;
 		}
-		  
+		
+		h5 {
+			font-weight: bold;
+		}
 	}
 
-	.fastNavDetail {
+	.breadcrumb-wrap {
+		margin: 0;
+
 		.breadcrumb{
 			background-color: transparent;
 			padding-left: 0;
 		}
+
 		a{
 			padding: 0.75rem;
 			padding-left: 0;
 			padding-right: 0;
 			color: $primary;
 			font-weight: bold;
+
 			&:hover{
 				color:#a96733;
 			}
 		}
 	}
 
-	.dataCar {
-		.specifCar{
-			column-count: 2;
+	.car-details-information {
+
+		.specs-title {
+			text-transform: uppercase;
+			background-color: #E0E0E0;
+			padding: 5px;
+			margin: 0;
+		}
+
+		.specs-car {
 			padding: 0;
 			margin: 0;
 			list-style: none;
-			li{
-				margin-bottom: 10px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+
+			li {
 				font-size: 16px;
 				color: black;
 				font-weight: bold;
-				span{
+				padding: 0px 5px;
+
+				span {
 					color:$primary;
 					font-weight: 400;
-					button{
+					float: right;
+
+					button {
 						background:red;
 						color: white;
 						font-weight: bold;
@@ -1846,113 +1937,154 @@ header {
 					}
 				}
 			}
+
 			@include media-breakpoint-down(sm){
 				column-count: 1;
 			}
 		}
 	}
 
-	.security {
-		p{
-			margin-bottom: 0;
-		}
-		form{
-			label{
-				color: black;
+	.action-car {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+
+		li {
+			margin-right: 20px;
+
+			a {
+				display: flex;
+				align-items: center;
+				border-radius: 3px;
+				color: white;
+				padding: 3px 10px;
+				line-height: initial;
 				font-size: 14px;
-				font-weight: 300;
-			}
-			.form-group{
-				margin-bottom: 0;
-			}
-			input[type=text],
-			textarea,
-			input[type=password] {
-				border-radius: 0;
-				background-color: transparent !important;
-				border: 1px solid #82c625;
+				font-weight: 500;
 
-				&:focus {
-					font-size: 15px;
-					color: #535d5b;
-					font-weight: bold;
-					border: 1px solid #82c625;
+				i {
+					margin-right: 5px;
 				}
 
-				&::placeholder {
-					color: #535d5b !important;
+				&.facebook {
+					background-color: #4267B2;
+				}
+
+				&.whatsapp {
+					background-color: green;
 				}
 			}
-			button{
-				padding: 10px 25px;
-				border-radius: 50px;
-				color:black;
-				font-weight: bold;
-				background-color: #ebc52b;
-				width: auto;
-				height: auto;
-				font-size: 13px;
-				border: none;
-				text-transform: none;
-				&:hover{
+		}
+
+		li:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	.current-vehicle-price {
+		border: 1px solid #E0E0E0;
+		padding: 15px 15px;
+		display: flex;
+		flex-direction: column;
+
+		.price-information {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			h4,h5 {
+				font-size: 20px;
+				margin-bottom: 10px;
+				font-weight: 500;
+			}
+
+			h5 {
+				color: $primary;
+			}
+		}
+
+		p {
+			color: black;
+			font-size: 16px;
+		}
+
+		a {
+			background-color: $primary;
+			border-radius: 3px;
+			text-transform: uppercase;
+			color: white;
+			font-size: 18px;
+			padding: 10px 0px;
+			box-shadow: $box-shadow-sm;
+			margin-top: auto;
+
+			i {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	.function-information-cars {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+
+		li {
+			margin-bottom: 20px;
+			width: 100%;
+			margin-right: 0px;
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				border-radius: 8px;
+				background-color: #E0E0E0;
+				color: gray;
+				padding: 14px 10px;
+				line-height: initial;
+				font-size: 16px;
+				text-transform: uppercase;
+				font-weight: 600;
+				transition: 0.3s;
+
+				i {
+					margin-right: 5px;
+				}
+
+				&:hover {
 					background-color: $primary;
 					color: white;
 				}
 			}
 		}
 	}
-	.additionalOptions{
-		h2{
-			background-color: #535d5b;
-			padding: 10px;
-			width: 100%;
-			color: white;
-			font-size: 16px;
-		}
-		ul{
-			list-style: none;
-			li{
-				margin-right: 5px;
-			}
-		}
-		span{
-			border-radius: 5px;
-			padding: 5px;
-			.fas{
-				font-size: 14px;
-				color: white;
-			}
-			.fab{
-				font-size: 14px;
-				color: white;
-			}
-		}
-		.twitter{
-			background-color: rgb(85, 172, 238);
-		}
-		.fb{
-			background-color: rgb(59, 89, 152);
-			padding: 5px 10px;
-		}
-		.pint{
-			background-color: rgb(189, 8, 28);
-			padding: 5px 8px;
-		}
-		.google{
-			background-color: rgb(202, 224, 255);
-		}
-		.gmail,.more{
-			background-color: rgb(1, 102, 255);
-		}
-		.gmail{
-			padding: 5px 7px;
-		}
-		.more{
-			padding: 5px 8px;
-		}
-		.flex-column-sm{
-			@include media-breakpoint-down(sm) {
-				flex-direction: column;
+
+	.standar-features {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+
+		li {
+			background-color: #E0E0E0;
+			padding: 9px 20px;
+			margin: 2px;
+			min-width: 155px;
+			text-align: center;
+			color: black;
+
+			&.active {
+				background-color: #FFCFA6;
 			}
 		}
 	}

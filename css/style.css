@@ -12543,8 +12543,72 @@ header .main-nav .main-menu::after {
   cursor: pointer;
 }
 
-#content .loginImg {
-  margin-top: 100px;
+#content .log-in-section .form-wrap {
+  border: 1px solid grey;
+  padding: 30px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+#content .log-in-section .form-wrap h4 {
+  font-size: 16px;
+}
+
+#content .log-in-section .form-wrap .create-account-button {
+  background-color: grey;
+  border-radius: 5px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#content .log-in-section .form-wrap .create-account-button:hover {
+  color: white;
+  background-color: #82c625;
+}
+
+#content .log-in-section .form-wrap p {
+  font-size: 12px;
+  text-align: center;
+  color: grey;
+  margin-top: 15px;
+}
+
+#content .log-in-section form label {
+  text-transform: initial;
+  color: grey;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+}
+
+#content .log-in-section form label a {
+  display: inline-block;
+  float: right;
+}
+
+#content .log-in-section form a {
+  font-size: 14px;
+  text-align: right;
+  display: block;
+}
+
+#content .log-in-section form .form-control {
+  border-radius: 5px;
+  border-color: grey;
+}
+
+#content .log-in-section form .form-check-label {
+  font-weight: 500;
+}
+
+#content .log-in-section form .btn {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 
 #content .why-us-information h3 {
@@ -12648,16 +12712,16 @@ header .main-nav .main-menu::after {
   }
 }
 
-#content .galleryCar .flickity-button, #content .galleryCar .flickity-page-dots {
+#content .car-gallery .flickity-page-dots {
   display: none;
 }
 
-#content .galleryCar .carousel {
+#content .car-gallery .carousel {
   background: transparent;
   margin-bottom: 10px;
 }
 
-#content .galleryCar .carousel-cell {
+#content .car-gallery .carousel-cell {
   width: 100%;
   height: 320px;
   margin-right: 10px;
@@ -12666,28 +12730,38 @@ header .main-nav .main-menu::after {
   padding: 5px;
 }
 
-#content .galleryCar .carousel-cell img {
+#content .car-gallery .carousel-cell img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-#content .galleryCar .carousel-nav .carousel-cell {
+#content .car-gallery .carousel-nav .carousel-cell {
   height: 80px;
   width: 100px;
 }
 
-#content .galleryCar .carousel-nav .carousel-cell.is-nav-selected {
+#content .car-gallery .carousel-nav .carousel-cell.is-nav-selected {
   background: #ED2;
 }
 
-#content .fastNavDetail .breadcrumb {
+#content .car-gallery h5 {
+  font-weight: bold;
+}
+
+#content .breadcrumb-wrap {
+  margin: 0;
+}
+
+#content .breadcrumb-wrap .breadcrumb {
   background-color: transparent;
   padding-left: 0;
 }
 
-#content .fastNavDetail a {
+#content .breadcrumb-wrap a {
   padding: 0.75rem;
   padding-left: 0;
   padding-right: 0;
@@ -12695,31 +12769,41 @@ header .main-nav .main-menu::after {
   font-weight: bold;
 }
 
-#content .fastNavDetail a:hover {
+#content .breadcrumb-wrap a:hover {
   color: #a96733;
 }
 
-#content .dataCar .specifCar {
-  -webkit-column-count: 2;
-          column-count: 2;
+#content .car-details-information .specs-title {
+  text-transform: uppercase;
+  background-color: #E0E0E0;
+  padding: 5px;
+  margin: 0;
+}
+
+#content .car-details-information .specs-car {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
-#content .dataCar .specifCar li {
-  margin-bottom: 10px;
+#content .car-details-information .specs-car li {
   font-size: 16px;
   color: black;
   font-weight: bold;
+  padding: 0px 5px;
 }
 
-#content .dataCar .specifCar li span {
+#content .car-details-information .specs-car li span {
   color: #82c625;
   font-weight: 400;
+  float: right;
 }
 
-#content .dataCar .specifCar li span button {
+#content .car-details-information .specs-car li span button {
   background: red;
   color: white;
   font-weight: bold;
@@ -12731,159 +12815,202 @@ header .main-nav .main-menu::after {
   cursor: pointer;
 }
 
-#content .dataCar .specifCar li span button:hover {
+#content .car-details-information .specs-car li span button:hover {
   background-color: #ebc52b;
   color: black;
 }
 
 @media (max-width: 767.98px) {
-  #content .dataCar .specifCar {
+  #content .car-details-information .specs-car {
     -webkit-column-count: 1;
             column-count: 1;
   }
 }
 
-#content .security p {
-  margin-bottom: 0;
+#content .action-car {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-#content .security form label {
-  color: black;
+#content .action-car li {
+  margin-right: 20px;
+}
+
+#content .action-car li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  color: white;
+  padding: 3px 10px;
+  line-height: initial;
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 500;
 }
 
-#content .security form .form-group {
-  margin-bottom: 0;
+#content .action-car li a i {
+  margin-right: 5px;
 }
 
-#content .security form input[type=text],
-#content .security form textarea,
-#content .security form input[type=password] {
-  border-radius: 0;
-  background-color: transparent !important;
-  border: 1px solid #82c625;
+#content .action-car li a.facebook {
+  background-color: #4267B2;
 }
 
-#content .security form input[type=text]:focus,
-#content .security form textarea:focus,
-#content .security form input[type=password]:focus {
-  font-size: 15px;
-  color: #535d5b;
-  font-weight: bold;
-  border: 1px solid #82c625;
+#content .action-car li a.whatsapp {
+  background-color: green;
 }
 
-#content .security form input[type=text]::-webkit-input-placeholder,
-#content .security form textarea::-webkit-input-placeholder,
-#content .security form input[type=password]::-webkit-input-placeholder {
-  color: #535d5b !important;
+#content .action-car li:last-child {
+  margin-right: 0px;
 }
 
-#content .security form input[type=text]:-ms-input-placeholder,
-#content .security form textarea:-ms-input-placeholder,
-#content .security form input[type=password]:-ms-input-placeholder {
-  color: #535d5b !important;
+#content .current-vehicle-price {
+  border: 1px solid #E0E0E0;
+  padding: 15px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#content .security form input[type=text]::-ms-input-placeholder,
-#content .security form textarea::-ms-input-placeholder,
-#content .security form input[type=password]::-ms-input-placeholder {
-  color: #535d5b !important;
+#content .current-vehicle-price .price-information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#content .security form input[type=text]::placeholder,
-#content .security form textarea::placeholder,
-#content .security form input[type=password]::placeholder {
-  color: #535d5b !important;
+#content .current-vehicle-price .price-information h4, #content .current-vehicle-price .price-information h5 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-#content .security form button {
-  padding: 10px 25px;
-  border-radius: 50px;
+#content .current-vehicle-price .price-information h5 {
+  color: #82c625;
+}
+
+#content .current-vehicle-price p {
   color: black;
-  font-weight: bold;
-  background-color: #ebc52b;
-  width: auto;
-  height: auto;
-  font-size: 13px;
-  border: none;
-  text-transform: none;
+  font-size: 16px;
 }
 
-#content .security form button:hover {
+#content .current-vehicle-price a {
+  background-color: #82c625;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0px;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-top: auto;
+}
+
+#content .current-vehicle-price a i {
+  margin-right: 15px;
+}
+
+#content .function-information-cars {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#content .function-information-cars li {
+  margin-bottom: 20px;
+  width: 100%;
+  margin-right: 0px;
+}
+
+#content .function-information-cars li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #E0E0E0;
+  color: gray;
+  padding: 14px 10px;
+  line-height: initial;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#content .function-information-cars li a i {
+  margin-right: 5px;
+}
+
+#content .function-information-cars li a:hover {
   background-color: #82c625;
   color: white;
 }
 
-#content .additionalOptions h2 {
-  background-color: #535d5b;
-  padding: 10px;
-  width: 100%;
-  color: white;
-  font-size: 16px;
-}
-
-#content .additionalOptions ul {
+#content .standar-features {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 }
 
-#content .additionalOptions ul li {
-  margin-right: 5px;
+#content .standar-features li {
+  background-color: #E0E0E0;
+  padding: 9px 20px;
+  margin: 2px;
+  min-width: 155px;
+  text-align: center;
+  color: black;
 }
 
-#content .additionalOptions span {
-  border-radius: 5px;
-  padding: 5px;
-}
-
-#content .additionalOptions span .fas {
-  font-size: 14px;
-  color: white;
-}
-
-#content .additionalOptions span .fab {
-  font-size: 14px;
-  color: white;
-}
-
-#content .additionalOptions .twitter {
-  background-color: #55acee;
-}
-
-#content .additionalOptions .fb {
-  background-color: #3b5998;
-  padding: 5px 10px;
-}
-
-#content .additionalOptions .pint {
-  background-color: #bd081c;
-  padding: 5px 8px;
-}
-
-#content .additionalOptions .google {
-  background-color: #cae0ff;
-}
-
-#content .additionalOptions .gmail, #content .additionalOptions .more {
-  background-color: #0166ff;
-}
-
-#content .additionalOptions .gmail {
-  padding: 5px 7px;
-}
-
-#content .additionalOptions .more {
-  padding: 5px 8px;
-}
-
-@media (max-width: 767.98px) {
-  #content .additionalOptions .flex-column-sm {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+#content .standar-features li.active {
+  background-color: #FFCFA6;
 }
 
 #content .mark-image-gallery-wrap {
