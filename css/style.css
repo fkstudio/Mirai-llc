@@ -12624,13 +12624,21 @@ header .main-nav .main-menu::after {
   border-radius: 5px;
 }
 
-#content .log-in-section form.create-user label {
+#content .log-in-section.create-user .form-wrap {
+  border-color: #F2F2F2;
+}
+
+#content .log-in-section.create-user label {
   color: black;
   font-size: 16px;
 }
 
-#content .log-in-section form.create-user .form-control {
+#content .log-in-section.create-user .form-control {
   border-radius: 0px;
+}
+
+#content .log-in-section.create-user .form-wrap {
+  border-radius: 20px;
 }
 
 #content .why-us-information h3 {

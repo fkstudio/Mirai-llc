@@ -1678,6 +1678,7 @@ header {
 			margin-bottom: 0px;
 			font-weight: 400;
 		}
+
 		.form-wrap {
 			border: 1px solid grey;
 			padding: 30px;
@@ -1743,16 +1744,24 @@ header {
 				box-shadow: $box-shadow;
 				border-radius: 5px;
 			}
+		}
 
-			&.create-user {
-				label {
-					color: black;
-					font-size: 16px;
-				}
+		&.create-user {
+			.form-wrap {
+				border-color: #F2F2F2;
+			}
 
-				.form-control {
-					border-radius: 0px;
-				}
+			label {
+				color: black;
+				font-size: 16px;
+			}
+
+			.form-control {
+				border-radius: 0px;
+			}
+
+			.form-wrap {
+				border-radius: 20px;
 			}
 		}
 	}
