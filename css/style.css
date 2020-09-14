@@ -11036,6 +11036,7 @@ header .main-nav .main-menu > li > a {
 @media (max-width: 1199.98px) {
   header .main-nav .main-menu > li > a {
     font-size: 11px;
+    padding: 0;
   }
 }
 
@@ -12752,6 +12753,12 @@ header .main-nav .main-menu::after {
   font-weight: bold;
 }
 
+@media (max-width: 1199.98px) {
+  #content .car-gallery {
+    margin-bottom: 20px;
+  }
+}
+
 #content .breadcrumb-wrap {
   margin: 0;
 }
@@ -12822,8 +12829,8 @@ header .main-nav .main-menu::after {
 
 @media (max-width: 767.98px) {
   #content .car-details-information .specs-car {
-    -webkit-column-count: 1;
-            column-count: 1;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
@@ -12877,6 +12884,12 @@ header .main-nav .main-menu::after {
   margin-right: 0px;
 }
 
+@media (max-width: 767.98px) {
+  #content .action-car {
+    margin-top: 10px;
+  }
+}
+
 #content .current-vehicle-price {
   border: 1px solid #E0E0E0;
   padding: 15px 15px;
@@ -12907,8 +12920,23 @@ header .main-nav .main-menu::after {
   font-weight: 500;
 }
 
+@media (max-width: 767.98px) {
+  #content .current-vehicle-price .price-information h4, #content .current-vehicle-price .price-information h5 {
+    margin-bottom: 5px;
+  }
+}
+
 #content .current-vehicle-price .price-information h5 {
   color: #82c625;
+}
+
+@media (max-width: 767.98px) {
+  #content .current-vehicle-price .price-information {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #content .current-vehicle-price p {
@@ -12930,6 +12958,12 @@ header .main-nav .main-menu::after {
 
 #content .current-vehicle-price a i {
   margin-right: 15px;
+}
+
+@media (max-width: 767.98px) {
+  #content .current-vehicle-price {
+    margin-bottom: 10px;
+  }
 }
 
 #content .function-information-cars {
@@ -13002,15 +13036,23 @@ header .main-nav .main-menu::after {
 
 #content .standar-features li {
   background-color: #E0E0E0;
-  padding: 9px 20px;
+  padding: 9px 10px;
   margin: 2px;
-  min-width: 155px;
+  min-width: 140px;
   text-align: center;
   color: black;
 }
 
 #content .standar-features li.active {
   background-color: #FFCFA6;
+}
+
+@media (max-width: 991.98px) {
+  #content .standar-features {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 #content .mark-image-gallery-wrap {

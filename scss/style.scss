@@ -394,10 +394,10 @@ header {
 
 					@include media-breakpoint-down(lg) {
 						font-size: 11px;
+						padding: 0;
 					}
 
 					@include media-breakpoint-down(md) {
-						// padding: 8px;
 						line-height: 1;
 						color: white;
 					}
@@ -1870,6 +1870,10 @@ header {
 		h5 {
 			font-weight: bold;
 		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 20px;
+		}
 	}
 
 	.breadcrumb-wrap {
@@ -1939,7 +1943,7 @@ header {
 			}
 
 			@include media-breakpoint-down(sm){
-				column-count: 1;
+				grid-template-columns: 1fr;
 			}
 		}
 	}
@@ -1982,6 +1986,10 @@ header {
 		li:last-child {
 			margin-right: 0px;
 		}
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 10px;
+		}
 	}
 
 	.current-vehicle-price {
@@ -1999,10 +2007,19 @@ header {
 				font-size: 20px;
 				margin-bottom: 10px;
 				font-weight: 500;
+
+				@include media-breakpoint-down(sm) {
+					margin-bottom: 5px;
+				}
 			}
 
 			h5 {
 				color: $primary;
+			}
+
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+		
 			}
 		}
 
@@ -2024,6 +2041,10 @@ header {
 			i {
 				margin-right: 15px;
 			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 10px;
 		}
 	}
 
@@ -2077,9 +2098,9 @@ header {
 
 		li {
 			background-color: #E0E0E0;
-			padding: 9px 20px;
+			padding: 9px 10px;
 			margin: 2px;
-			min-width: 155px;
+			min-width: 140px;
 			text-align: center;
 			color: black;
 
@@ -2087,6 +2108,10 @@ header {
 				background-color: #FFCFA6;
 			}
 		}
+
+		@include media-breakpoint-down(md) {
+			justify-content: center;
+		} 
 	}
 
 	.mark-image-gallery-wrap {
