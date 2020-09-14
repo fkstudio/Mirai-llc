@@ -12508,24 +12508,24 @@ header .main-nav .main-menu::after {
   font-size: 14px;
 }
 
-#content .listInfoCreateUser {
+#content .create-user-information {
   color: #535d5b;
 }
 
 @media (max-width: 767.98px) {
-  #content .listInfoCreateUser {
+  #content .create-user-information {
     text-align: center;
   }
 }
 
-#content .listInfoCreateUser a {
+#content .create-user-information a {
   color: #82c625;
   text-decoration: none;
   cursor: pointer;
   font-weight: bold;
 }
 
-#content .listInfoCreateUser li a {
+#content .create-user-information li a {
   color: #82c625;
   text-decoration: none;
   cursor: pointer;
@@ -12533,15 +12533,27 @@ header .main-nav .main-menu::after {
 }
 
 @media (max-width: 767.98px) {
-  #content .listInfoCreateUser li {
+  #content .create-user-information li {
     text-align: left;
   }
+}
+
+#content .create-form {
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  border: 1px solid gray;
+  border-radius: 20px;
 }
 
 #content .contact-information a {
   color: #82c625;
   text-decoration: none;
   cursor: pointer;
+}
+
+#content .log-in-section h5 {
+  margin-bottom: 0px;
+  font-weight: 400;
 }
 
 #content .log-in-section .form-wrap {
@@ -12610,6 +12622,15 @@ header .main-nav .main-menu::after {
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 5px;
+}
+
+#content .log-in-section form.create-user label {
+  color: black;
+  font-size: 16px;
+}
+
+#content .log-in-section form.create-user .form-control {
+  border-radius: 0px;
 }
 
 #content .why-us-information h3 {
@@ -12726,9 +12747,7 @@ header .main-nav .main-menu::after {
   width: 100%;
   height: 320px;
   margin-right: 10px;
-  border: 2px solid #ED2;
   counter-increment: carousel-cell;
-  padding: 5px;
 }
 
 #content .car-gallery .carousel-cell img {
@@ -12782,7 +12801,7 @@ header .main-nav .main-menu::after {
 
 #content .car-details-information .specs-title {
   text-transform: uppercase;
-  background-color: #E0E0E0;
+  background: linear-gradient(184deg, #fefefe 0%, #e9e9e9 78%);
   padding: 5px;
   margin: 0;
 }
@@ -12791,13 +12810,24 @@ header .main-nav .main-menu::after {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 #content .car-details-information .specs-car li {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 16.66667%;
+          flex: 0 0 16.66667%;
+  max-width: 16.66667%;
   font-size: 16px;
   color: black;
   font-weight: bold;
@@ -12807,31 +12837,6 @@ header .main-nav .main-menu::after {
 #content .car-details-information .specs-car li span {
   color: #82c625;
   font-weight: 400;
-  float: right;
-}
-
-#content .car-details-information .specs-car li span button {
-  background: red;
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding: 5px 25px;
-  border-radius: 10px;
-  font-size: 16px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-#content .car-details-information .specs-car li span button:hover {
-  background-color: #ebc52b;
-  color: black;
-}
-
-@media (max-width: 767.98px) {
-  #content .car-details-information .specs-car {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
 }
 
 #content .action-car {
@@ -13032,6 +13037,9 @@ header .main-nav .main-menu::after {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #content .standar-features li {
@@ -13047,12 +13055,128 @@ header .main-nav .main-menu::after {
   background-color: #FFCFA6;
 }
 
-@media (max-width: 991.98px) {
-  #content .standar-features {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+#content nav {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#content nav .control-tab-car-details {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+#content nav .control-tab-car-details li {
+  width: 100%;
+}
+
+#content nav .control-tab-car-details li a {
+  display: block;
+  position: relative;
+  background-color: #F2F2F2;
+  color: grey;
+  font-size: 20px;
+  border: 1px solid grey;
+  padding: 15px 0px;
+  text-align: center;
+  line-height: initial;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#content nav .control-tab-car-details li a::before {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #CCCCCC;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#content nav .control-tab-car-details li a.active, #content nav .control-tab-car-details li a:hover {
+  background-color: white;
+  color: #82c625;
+  border-color: #82c625;
+}
+
+#content nav .control-tab-car-details li a.active::before, #content nav .control-tab-car-details li a:hover::before {
+  background-color: #82c625;
+}
+
+#content nav .control-tab-car-details li:first-child a {
+  border-right: 0px;
+}
+
+#content .tabs-content p {
+  color: grey;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+#content .tabs-content p span {
+  color: red;
+}
+
+#content .tabs-content form label {
+  text-transform: capitalize;
+}
+
+#content .tabs-content form label span {
+  color: red;
+}
+
+#content .tabs-content form .form-control {
+  border-color: gray;
+  border-radius: 5px;
+  height: 40px;
+}
+
+#content .tabs-content form .form-control::-webkit-input-placeholder {
+  font-weight: 400;
+}
+
+#content .tabs-content form .form-control:-ms-input-placeholder {
+  font-weight: 400;
+}
+
+#content .tabs-content form .form-control::-ms-input-placeholder {
+  font-weight: 400;
+}
+
+#content .tabs-content form .form-control::placeholder {
+  font-weight: 400;
+}
+
+#content .tabs-content form button {
+  background-color: #82c625;
+  border-radius: 3px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  margin-top: auto;
+  border: 0px;
+  font-weight: 600;
+  margin-top: 20px !important;
+}
+
+#content .tabs-content form button i {
+  margin-right: 15px;
+}
+
+#content .tabs-content .tab {
+  display: none;
+}
+
+#content .tabs-content .tab.open {
+  display: block;
 }
 
 #content .mark-image-gallery-wrap {
