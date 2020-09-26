@@ -11120,7 +11120,6 @@ header .main-nav .main-menu > li .sub-nav {
   header .main-nav .main-menu > li .sub-nav {
     position: static;
     width: 100%;
-    padding: 0px 20px;
   }
 }
 
@@ -11131,7 +11130,7 @@ header .main-nav .main-menu > li .sub-nav ul {
 }
 
 header .main-nav .main-menu > li .sub-nav ul li {
-  padding: 16px 0px;
+  padding: 16px 15px;
   font-weight: bold;
   border-bottom: 1px solid black;
   color: white;

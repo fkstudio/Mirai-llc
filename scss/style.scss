@@ -469,7 +469,6 @@ header {
 					@include media-breakpoint-down(md) {
 						position: static;
 						width: 100%;
-						padding: 0px 20px;
 					}
 
 					ul {
@@ -478,7 +477,7 @@ header {
 						list-style: none;
 
 						li {
-							padding: 16px 0px;
+							padding: 16px 15px;
 							font-weight: bold;
 							border-bottom: 1px solid black;
 							color: white;
