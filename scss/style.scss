@@ -1941,7 +1941,6 @@ header {
 
 		.specs-title {
 			text-transform: uppercase;
-			// background-color: #E0E0E0;
 			background: linear-gradient(184deg, rgba(254,254,254,1) 0%, rgba(233,233,233,1) 78%);
 			padding: 5px;
 			margin: 0;
@@ -1951,31 +1950,37 @@ header {
 			padding: 0;
 			margin: 0;
 			list-style: none;
-			// display: grid;
-			// grid-template-columns: 1fr 1fr;
-			@include make-row();
+			display: grid;
+			grid-template-columns: 1fr 1fr;
 
 			li {
-				@include make-col-ready();
-				@include media-breakpoint-down(xl) {
-					@include make-col(2);
-				}
 
 				font-size: 16px;
 				color: black;
 				font-weight: bold;
-				padding: 0px 5px;
+				padding: 5px 5px;
+				transition: 0.3s;
 
 				span {
 					color:$primary;
 					font-weight: 400;
-					// float: right;
+					float: right;
+				}
+
+				&:hover {
+					background-color: $primary;
+					color: white;
+
+					span {
+						color: white;
+						font-weight: bold;
+					}
 				}
 			}
 
-			// @include media-breakpoint-down(sm){
-			// 	grid-template-columns: 1fr;
-			// }
+			@include media-breakpoint-down(sm) {
+				grid-template-columns: 1fr;
+			}
 		}
 	}
 
