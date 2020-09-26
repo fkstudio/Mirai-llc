@@ -319,6 +319,7 @@ header {
 		justify-content: center;
 		background: rgba(234, 237, 240, .8);
 		box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+		position: relative;
 
 		@include media-breakpoint-down(md) {
 			justify-content: flex-start;
@@ -374,9 +375,15 @@ header {
 				position: relative;
 				transition-duration: 0.3s;
 				height: 100%;
+				background-color: #BCBEC0;
 
 				@include media-breakpoint-down(lg) {
 					padding: 10px;
+				}
+
+				@include media-breakpoint-down(md) {
+					background-color: transparent;
+					padding: 0px;
 				}
 
 				> a {
@@ -400,6 +407,7 @@ header {
 					@include media-breakpoint-down(md) {
 						line-height: 1;
 						color: white;
+						padding: 20px;
 					}
 
 				}
@@ -461,6 +469,7 @@ header {
 					@include media-breakpoint-down(md) {
 						position: static;
 						width: 100%;
+						padding: 0px 20px;
 					}
 
 					ul {
@@ -469,7 +478,7 @@ header {
 						list-style: none;
 
 						li {
-							padding: 16px;
+							padding: 16px 0px;
 							font-weight: bold;
 							border-bottom: 1px solid black;
 							color: white;
@@ -491,23 +500,25 @@ header {
 				}
 			}
 
-			&::after {
-				position: absolute;
-				content: "";
-				z-index: 1;
-				width: 33%;
-				background-color: #82c625;
-				height: 100%;
-				right: -160px;
+			@include media-breakpoint-down(md) {
+				height: auto;
+			}
+		}
 
-				@include media-breakpoint-down(lg) {
-					width:43%;
-					right: -125px;
-				}
+		&::after {
+			position: absolute;
+			content: "";
+			z-index: 1;
+			background-color: #82c625;
+			height: 100%;
+			right: 0px;
 
-				@include media-breakpoint-down(md) {
-					display: none;
-				}
+			@include media-breakpoint-down(xl) {
+				width: 50%;
+			}
+
+			@include media-breakpoint-down(md) {
+				display: none;
 			}
 		}
 	}
